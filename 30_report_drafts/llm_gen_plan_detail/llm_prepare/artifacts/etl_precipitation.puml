@@ -1,0 +1,84 @@
+@startuml
+allow_mixing
+
+' === Визуальные настройки ===
+skinparam shadow false
+skinparam defaultFontName "PtSans"
+skinparam defaultFontSize 12
+skinparam roundCorner 10
+skinparam linetype ortho
+
+' === СТИЛИ СВЯЗЕЙ (Data Pipes) ===
+skinparam arrow {
+    Color SlateGray
+    Thickness 2
+    FontColor DimGray
+}
+
+' === СТИЛИ ===
+skinparam package {
+    BackgroundColor White
+    BorderColor LightGray
+    FontColor Gray
+    FontStyle Bold
+}
+
+skinparam database<<gee>> {
+    BackgroundColor HoneyDew
+    BorderColor DarkSeaGreen
+}
+
+skinparam rectangle<<Transform>> {
+    BackgroundColor PeachPuff
+    BorderColor SandyBrown
+}
+
+skinparam rectangle<<Param>> {
+    BackgroundColor LemonChiffon
+    BorderColor Gold
+}
+
+skinparam rectangle<<Result>> {
+    BackgroundColor LightGreen
+    BorderColor MediumSeaGreen
+}
+
+' === МАКРОСЫ ===
+!define GEE(id, label) database "label" as id <<gee>>
+!define PARAM(id, label) rectangle "label" as id <<Param>>
+!define TRANSFORM(id, label) rectangle "label" as id <<Transform>>
+!define RESULT(id, label) rectangle "label" as id <<Result>>
+!define ZONE(id, label) package "label" as id
+
+title Моделирование экстремальных осадков (ETL фрагмент)
+
+ZONE(gee_chirps, "Расчет осадков") {
+    GEE(chirps, "<b>Статистика CHIRPS</b>\n(Многолетние данные)")
+        
+    RESULT(chirps_max1,"<b>Годовые максимумы</b>\n(1 день, мм)")
+    RESULT(chirps_max5,"<b>Годовые максимумы</b>\n(5 дней, мм)")
+    RESULT(chirps_stat,"<b>Статистика</b>\n(СКО, среднее)")  
+    RESULT(rx1,"<b>Rx1Day</b>\n(Макс. суточные, мм)")
+    RESULT(rx5,"<b>Rx5Day</b>\n(Макс. за 5 суток, мм)")
+    
+    TRANSFORM(selectMax, "<b>Выборка годовых максимумов</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(selectMax5, "<b>Скользящее окно 5 дней</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(calc_stat, "<b>Расчет статистики</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(approx, "<b>Аппроксимация</b>\n(Распределением Гумбеля)")
+    
+    PARAM(ari, "<b>Расчетный ARI</b>\n(Расчетный период повторяемости)")
+    
+    chirps --> selectMax    
+    chirps --> selectMax5
+    selectMax --> chirps_max1
+    selectMax5 --> chirps_max5
+    chirps_max1 --> calc_stat
+    chirps_max5 --> calc_stat
+    calc_stat --> chirps_stat        
+    chirps_stat --> approx
+    ari .> approx
+    approx --> rx1
+    approx --> rx5
+}
+
+@enduml

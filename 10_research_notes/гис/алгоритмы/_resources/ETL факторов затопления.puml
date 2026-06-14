@@ -1,0 +1,320 @@
+@startuml
+allow_mixing
+
+' === Визуальные настройки ===
+skinparam shadow false
+skinparam defaultFontName "PtSans"
+skinparam defaultFontSize 12
+skinparam roundCorner 10
+' ortho делает линии прямыми углами, что чище для ETL
+skinparam linetype ortho
+
+' === СТИЛИ СВЯЗЕЙ (Data Pipes) ===
+skinparam arrow {
+    Color SlateGray
+    Thickness 2
+    FontColor DimGray
+}
+
+' === СТИЛИ Разные ===
+skinparam package {
+    BackgroundColor White
+    BorderColor LightGray
+    FontColor Gray
+    FontStyle Bold
+}
+skinparam diamond {
+     BackgroundColor White
+     BorderColor SlateGray
+     FontColor DimGray
+}
+skinparam legend {
+    BackgroundColor White
+    BorderColor dimgrey
+    FontName "PtSans"
+}
+
+skinparam rectangle<<Ref>> {
+    BackgroundColor White
+    BorderColor SlateGrey
+    BorderStyle dashed
+}
+
+' === БАЗЫ ДАННЫХ (Sources) ===
+skinparam database {
+    BackgroundColor LightPink
+    BorderColor HotPink
+}
+
+skinparam database<<gee>> {
+    BackgroundColor HoneyDew
+    BorderColor DarkSeaGreen
+}
+
+skinparam artifact<<File>> {
+    BackgroundColor WhiteSmoke
+    BorderColor DarkGray
+}
+
+skinparam component<<API>> {
+    BackgroundColor AliceBlue
+    BorderColor CornflowerBlue
+}
+
+' === ПРОЦЕССЫ (Transform & Params) ===
+skinparam rectangle<<Transform>> {
+    BackgroundColor PeachPuff
+    BorderColor SandyBrown
+}
+
+skinparam rectangle<<ArcPy>> {
+    BackgroundColor Lavender
+    BorderColor MediumPurple
+}
+
+skinparam rectangle<<Param>> {
+    BackgroundColor LemonChiffon
+    BorderColor Gold
+}
+
+' === РЕЗУЛЬТАТЫ (Load / Target) ===
+skinparam rectangle<<Result>> {
+    BackgroundColor LightGreen
+    BorderColor MediumSeaGreen
+}
+
+' === МАКРОСЫ ===
+!define DB(id, label) database "label" as id
+!define GEE(id, label) database "label" as id <<gee>>
+!define FILE(id, label) artifact "label" as id <<File>>
+!define API(id, label) component "label" as id <<API>>
+!define PARAM(id, label) rectangle "label" as id <<Param>>
+!define TRANSFORM(id, label) rectangle "label" as id <<Transform>>
+!define ARCPY(id, label) rectangle "label" as id <<ArcPy>>
+!define RESULT(id, label) rectangle "label" as id <<Result>>
+!define ZONE(id, label) package "label" as id
+!define CHECK(id, label) diamond "label" as id
+!define REF(id, label) rectangle "label" as id <<Ref>>
+
+' Макрос легенды
+!procedure DRAW_LEGEND()
+legend top left
+    **Условные обозначения**
+    | **Цвет**      | **Стереотип** | **Описание**|
+    |<#LightPink>   |        | База данных |
+    |<#HoneyDew>    |«gee»   | Google Earth Engine |
+    |<#WhiteSmoke>  |«File»  | Файл |
+    |<#AliceBlue>   |«API»   | Вызов API |
+    |<#PeachPuff>   |«Transform»| Трансформация данных |
+    |<#Lavender>    |«ArcPy» | Трансформация с ArcPy |
+    |<#LemonChiffon>|«Param» | Параметры |
+    |<#LightGreen>  |«Result»| Выходные данные |
+    |               |«Ref»| Ссылка на данные |
+endlegend
+!endprocedure
+
+title Подготовка данных для оценки факторов затопления
+
+DRAW_LEGEND()
+
+' === Хранилище итогов ===
+DB(factors, "<b>Факторы затопления</b>")
+DB(factors_p, "<b>Факторы затопления\nпотенциальные</b>")
+
+ZONE(gee_chirps, "Расчет осадков") {
+    GEE(chirps, "<b>Статистика CHIRPS</b>\n(Многолетние данные)")
+        
+    RESULT(chirps_max1,"<b>Годовые максимумы</b>\n(1 день, мм)")
+    RESULT(chirps_max5,"<b>Годовые максимумы</b>\n(5 дней, мм)")
+    RESULT(chirps_stat,"<b>Статистика</b>\n(СКО, среднее)")  
+    RESULT(rx1,"<b>Rx1Day</b>\n(Макс. суточные, мм)")
+    RESULT(rx5,"<b>Rx5Day</b>\n(Макс. за 5 суток, мм)")
+    
+    TRANSFORM(selectMax, "<b>Выборка годовых максимумов</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(selectMax5, "<b>Скользящее окно 5 дней</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(calc_stat, "<b>Расчет статистики</b>\n(Облачная обработка (GEE))")
+    TRANSFORM(approx, "<b>Аппроксимация</b>\n(Распределением Гумбеля)")
+    
+    PARAM(ari, "<b>Расчетный ARI</b>\n(Расчетный период повторяемости)")
+    
+    chirps --> selectMax    
+    chirps --> selectMax5
+    selectMax --> chirps_max1
+    selectMax5 --> chirps_max5
+    chirps_max1 --> calc_stat
+    chirps_max5 --> calc_stat
+    calc_stat --> chirps_stat        
+    chirps_stat --> approx
+    ari .> approx
+    approx --> rx1
+    approx --> rx5
+}
+
+ZONE(relief, "Анализ рельефа") {
+    DB(dem, "<b>TanDEM-X</b>\n(ЦМР)")
+    
+    RESULT(fill,"<b>ЦМР</b>\n(ЦМР с гидрокоррекцией)")
+    RESULT(slope,"<b>Уклон</b>\n(в %)")
+    RESULT(fdir,"<b>Направление стока</b>\n(Формат «D8»)")
+    RESULT(basin_raw,"<b>Водосборные бассейны</b>\n(Первичные)")
+    RESULT(basin,"<b>Водосборные бассейны</b>\n(Генерализованные)")
+    RESULT(hand,"<b>Высота над водотоком</b>")
+    RESULT(twi,"<b>Локальные понижения рельефа</b>")
+
+    ARCPY(fill_p, "<b>Гидрокоррекция</b>\n(Заполнение локальных понижений)")
+    ARCPY(slope_p, "<b>Расчет уклона</b>\n(в %)")
+    ARCPY(fdir_p, "<b>Расчет направления стока</b>")
+    ARCPY(basin_calc, "<b>Расчет водосборных бассейнов</b>")
+    ARCPY(basin_gen_calc, "<b>Генерализация водосборных бассейнов</b>\n(Полуавтоматическая)")
+    ARCPY(hand_calc, "<b>Расчет высоты над водотоком</b>\n(Внешний Topography Toolbox)")
+    ARCPY(twi_calc, "<b>Расчет локальных понижений рельефа</b>\n(Внешний Topography Toolbox)")
+    
+    dem --> fill_p
+    fill_p --> fill
+    fill --> slope_p
+    fill --> fdir_p
+    slope_p --> slope
+    fdir_p --> fdir
+    fdir --> basin_calc
+    basin_calc --> basin_raw
+    basin_raw --> basin_gen_calc
+    basin_gen_calc --> basin
+        
+    REF(watercourse_synonym, "<b>Основные водотоки</b>")
+    watercourse_synonym --> hand_calc
+    fill --> hand_calc
+    hand_calc --> hand
+    
+    fill --> twi_calc
+    twi_calc --> twi
+    
+    hand --> factors
+    slope --> factors
+    twi --> factors
+    
+}
+
+ZONE(flow, "Анализ стока") {
+    DB(landuse, "<b>WorldCover</b>\n(Покрытия)") 
+    DB(soil, "<b>HiHydroSoil</b>\n(Группы почв)")
+    DB(xrain, "<b>Статистика XRain</b>\n(Кривые IDF осадков)")
+    
+    RESULT(cn,"<b>SCS-CN</b>\n(Кривые стока)")
+    RESULT(manning,"<b>Шероховатость (n)</b>\n(по Маннингу)")
+    RESULT(run_rx5,"<b>Сток Rx5Day</b>\n(Слой в метрах)")
+    RESULT(flow_acc_5,"<b>Накопленный сток Rx5Day</b>\n(в метрах)")
+    RESULT(watercourse,"<b>Основные водотоки</b>")
+    RESULT(rain,"<b>Max интенсивный ливень</b>\n(Длительность, доля от Rx1Day,\nпоправка за пик)")
+    RESULT(rx,"<b>Ливень</b>\n(Интенсивность ливня, мм/сек)")
+    RESULT(rainfall_acc,"<b>Удельный расход при ливне</b>\n(м²/с)")
+    RESULT(flow_h,"<b>Глубина стока</b>\n(м)")
+    RESULT(cost_hor,"<b>Горизонтальная стоимость</b>\n(Гидравлический уклон\nпри горизонтальном движении\nм/м)")
+    FILE(vf, "<b>Вертикальный фактор</b>")
+    RESULT(split_cost_hor,"<b>Тайлы горизонтальной стоимости</b>")
+    RESULT(cost_acc_split,"<b>Расстояние до водотока</b>\n(Напор для достижения ячейки, м)")
+    RESULT(cost_acc,"<b>Расстояние до водотока</b>\n(Напор для достижения ячейки, м)")
+    
+    ARCPY(scs_calc, "<b>Перекодировка в SCS-CN</b>\n(Номер кривой)")
+    ARCPY(manning_calc, "<b>Перекодировка в шероховатость</b>\n(n Маннинга)")
+    ARCPY(runoff_calc_5, "<b>Расчет стока с ячейки</b>\n(Методика SCS\n(известна как TR-55))")
+    ARCPY(flow_acc_5_calc, "<b>Накопленние стока</b>\n(Flow Accumulation)")
+    ARCPY(watercourse_sel, "<b>Выделение водотоков</b>\nОпционально упорядочивание\nи векторизация")
+    TRANSFORM(idf_analyze, "<b>Визуальный анализ кривых IDF</b>\n(Поиск max интенсивного ливня)")
+    ARCPY(rain_intens_calc, "<b>Расчет интенсивности стока ливня</b>")
+    ARCPY(rainfall_acc_calc, "<b>Расчет удельного расхода</b>\n(при ливне)")
+    ARCPY(flow_h_calc, "<b>Расчет глубины стока</b>\n(Для склонового стока\nсоответствует\nгидравлическому радиусу)")
+    ARCPY(cost_hor_calc, "<b>Расчет горизонтальной стоимости</b>\n(Гидравлического уклона)")
+    TRANSFORM(vf_calc, "<b>Расчет вертикального фактора</b>")
+    TRANSFORM(split_bassin_stream, "<b>Разрезать бассейны водотоками</b>\n(Для бассейнов свыше 100 тыс. км²)")
+    ARCPY(split_cost_hor_calc, "<b>Разрезать по водоразделам</b>\n(Для производительности)")
+    ARCPY(cost_acc_calc, "<b>Накопление энергозатрат</b>\n(Движение от русла к водоразделу)")
+    ARCPY(cost_acc_mosaic, "<b>Сшивка мозаики</b>\n")
+    
+    PARAM(cn_ref, "<b>Справочник перекодировки</b>\n(Покрытие+Гидрогруппа->CN)")
+    PARAM(manning_ref, "<b>Справочник перекодировки</b>\n(Покрытие->n Маннинга)")
+    PARAM(watercourse_val, "<b>Сток руслоформирования</b>\n(Для Бенина принят 7561)")
+    PARAM(cost_hor_calc_param, "<b>Расчетные параметры потока</b>\n(скорость (м/с), глубина (м)\n базовый гидрорадиус)")
+    
+    landuse --> scs_calc
+    soil --> scs_calc
+    cn_ref .> scs_calc
+    scs_calc --> cn
+    
+    REF(rx5_synonym, "<b>Rx5day</b>")
+    
+    rx5_synonym --> runoff_calc_5
+    cn --> runoff_calc_5
+    runoff_calc_5 --> run_rx5
+    run_rx5 --> flow_acc_5_calc
+    
+    REF(fdir_synonym,"<b>Направление стока</b>\n(Формат «D8»)")
+    
+    fdir_synonym --> flow_acc_5_calc
+    flow_acc_5_calc --> flow_acc_5
+    flow_acc_5 --> watercourse_sel
+    watercourse_sel <. watercourse_val
+    watercourse_sel --> watercourse
+   
+    xrain --> idf_analyze
+    idf_analyze --> rain
+    rain --> rain_intens_calc
+    cn --> rain_intens_calc
+    
+    REF(rx1_synonym,"<b>Rx1Day</b>")
+    
+    rx1_synonym --> rain_intens_calc
+    rain_intens_calc --> rx
+    rx --> rainfall_acc_calc
+    rainfall_acc_calc --> rainfall_acc
+    
+    landuse --> manning_calc
+    manning_calc <. manning_ref
+    manning_calc --> manning
+    
+    rainfall_acc --> flow_h_calc
+    manning --> flow_h_calc
+    
+    REF(slope_synonym,"<b>Уклон</b>\n(в %)")
+    
+    slope_synonym --> flow_h_calc
+    flow_h_calc --> flow_h
+    
+    cost_hor_calc_param --> vf_calc
+    vf_calc --> vf
+
+    cost_hor_calc_param .> cost_hor_calc
+    manning --> cost_hor_calc
+    cost_hor_calc --> cost_hor
+    cost_hor --> split_cost_hor_calc
+    
+    REF(basin_synonym,"<b>Водосборные бассейны</b>\n(Генерализованные)")
+    
+    basin_synonym --> split_bassin_stream
+    split_bassin_stream --> split_cost_hor_calc
+    split_cost_hor_calc --> split_cost_hor
+    
+    split_cost_hor --> cost_acc_calc
+    vf --> cost_acc_calc
+    watercourse --> cost_acc_calc
+    
+    REF(fill_synonym,"<b>ЦМР</b>\n(ЦМР с гидрокоррекцией)")
+    
+    fill_synonym --> cost_acc_calc
+    cost_acc_calc --> cost_acc_split
+    cost_acc_split --> cost_acc_mosaic
+    cost_acc_mosaic --> cost_acc
+    
+    rx --> factors
+    cn --> factors
+    cost_acc --> factors
+    flow_h  --> factors_p
+    
+    ' === Визуальная коррекция ===
+    xrain -[hidden]> soil
+}
+
+' === Визуальная коррекция ===
+chirps -[hidden]> dem
+dem -[hidden]> xrain
+
+@enduml

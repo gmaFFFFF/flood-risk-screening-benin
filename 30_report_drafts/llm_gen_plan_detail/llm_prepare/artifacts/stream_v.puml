@@ -1,0 +1,25 @@
+@startuml
+skinparam handwritten false
+skinparam monochrome true
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+rectangle "Порядок водотоков (Strahler Order)" as Strahler {
+    rectangle "1-й порядок: Исток" as O1 #aliceblue
+    rectangle "1-й порядок: Исток" as O1b #aliceblue
+    rectangle "2-й порядок: Слияние (1+1)" as O2 #lightblue
+    rectangle "2-й порядок: Слияние (1+1)" as O2b #lightblue
+    rectangle "3-й порядок: Слияние (2+2)" as O3 #skyblue
+    
+    O1 --> O2
+    O1b --> O2
+    O2 --> O3
+    O2b --> O3
+}
+
+note bottom of Strahler
+    Порядок увеличивается только при слиянии водотоков одинакового порядка.
+    Слияние 1+2 дает 2-й порядок.
+end note
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing false
+
+title Конвейер метода WLC
+
+node "Исходные факторы" {
+  [Фактор 1] as f1
+  [Фактор 2] as f2
+  [Фактор n] as fn
+}
+
+node "Нормализация" {
+  [Нормализованный\nФактор 1] as nf1
+  [Нормализованный\nФактор 2] as nf2
+  [Нормализованный\nФактор n] as nfn
+}
+
+node "Взвешивание" {
+  [Вес 1] as w1
+  [Вес 2] as w2
+  [Вес n] as wn
+}
+
+circle "Попиксельная\nсумма" as sum
+
+[Интегральный фактор\n(Индекс)] as result
+
+f1 --> nf1
+f2 --> nf2
+fn --> nfn
+
+nf1 --> sum
+nf2 --> sum
+nfn --> sum
+
+w1 ..> sum
+w2 ..> sum
+wn ..> sum
+
+sum --> result
+
+@enduml

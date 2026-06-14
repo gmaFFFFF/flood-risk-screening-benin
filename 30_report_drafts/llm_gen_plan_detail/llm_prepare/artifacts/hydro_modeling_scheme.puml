@@ -1,0 +1,223 @@
+@startuml
+allow_mixing
+
+' === Визуальные настройки ===
+skinparam shadow false
+skinparam defaultFontName "PtSans"
+skinparam defaultFontSize 12
+skinparam roundCorner 10
+skinparam linetype ortho
+
+' === СТИЛИ СВЯЗЕЙ (Data Pipes) ===
+skinparam arrow {
+    Color SlateGray
+    Thickness 2
+    FontColor DimGray
+}
+
+' === СТИЛИ Разные ===
+skinparam package {
+    BackgroundColor White
+    BorderColor LightGray
+    FontColor Gray
+    FontStyle Bold
+}
+skinparam diamond {
+     BackgroundColor White
+     BorderColor SlateGray
+     FontColor DimGray
+}
+skinparam legend {
+    BackgroundColor White
+    BorderColor dimgrey
+    FontName "PtSans"
+}
+
+skinparam rectangle<<Ref>> {
+    BackgroundColor White
+    BorderColor SlateGrey
+    BorderStyle dashed
+}
+
+' === БАЗЫ ДАННЫХ (Sources) ===
+skinparam database {
+    BackgroundColor LightPink
+    BorderColor HotPink
+}
+
+skinparam database<<gee>> {
+    BackgroundColor HoneyDew
+    BorderColor DarkSeaGreen
+}
+
+skinparam artifact<<File>> {
+    BackgroundColor WhiteSmoke
+    BorderColor DarkGray
+}
+
+' === ПРОЦЕССЫ (Transform & Params) ===
+skinparam rectangle<<Transform>> {
+    BackgroundColor PeachPuff
+    BorderColor SandyBrown
+}
+
+skinparam rectangle<<ArcPy>> {
+    BackgroundColor Lavender
+    BorderColor MediumPurple
+}
+
+skinparam rectangle<<Param>> {
+    BackgroundColor LemonChiffon
+    BorderColor Gold
+}
+
+' === РЕЗУЛЬТАТЫ (Load / Target) ===
+skinparam rectangle<<Result>> {
+    BackgroundColor LightGreen
+    BorderColor MediumSeaGreen
+}
+
+' === МАКРОСЫ ===
+!define DB(id, label) database "label" as id
+!define GEE(id, label) database "label" as id <<gee>>
+!define FILE(id, label) artifact "label" as id <<File>>
+!define PARAM(id, label) rectangle "label" as id <<Param>>
+!define TRANSFORM(id, label) rectangle "label" as id <<Transform>>
+!define ARCPY(id, label) rectangle "label" as id <<ArcPy>>
+!define RESULT(id, label) rectangle "label" as id <<Result>>
+!define ZONE(id, label) package "label" as id
+!define REF(id, label) rectangle "label" as id <<Ref>>
+
+' Макрос легенды
+!procedure DRAW_LEGEND()
+legend top left
+    **Условные обозначения**
+    | **Цвет**      | **Стереотип** | **Описание**|
+    |<#LightPink>   |        | База данных |
+    |<#HoneyDew>    |«gee»   | Google Earth Engine |
+    |<#WhiteSmoke>  |«File»  | Файл |
+    |<#PeachPuff>   |«Transform»| Трансформация данных |
+    |<#Lavender>    |«ArcPy» | Трансформация с ArcPy |
+    |<#LemonChiffon>|«Param» | Параметры |
+    |<#LightGreen>  |«Result»| Выходные данные |
+    |               |«Ref»| Ссылка на данные |
+endlegend
+!endprocedure
+
+title Детальная схема этапа гидрологического моделирования
+
+DRAW_LEGEND()
+
+' === Входные данные (внешние ссылки) ===
+ZONE(inputs, "Входные данные") {
+    DB(landuse, "<b>WorldCover</b>\n(Покрытия)") 
+    DB(soil, "<b>HiHydroSoil</b>\n(Группы почв)")
+    DB(xrain, "<b>Статистика XRain</b>\n(Кривые IDF осадков)")
+    REF(rx5_synonym, "<b>Rx5day</b>\n(Осадки за 5 сут.)")
+    REF(rx1_synonym,"<b>Rx1Day</b>\n(Макс. суточные)")
+    REF(fdir_synonym,"<b>Направление стока</b>\n(D8)")
+    REF(slope_synonym,"<b>Уклон</b>\n(%)")
+    REF(fill_synonym,"<b>ЦМР</b>\n(Гидрокоррекция)")
+    REF(basin_synonym,"<b>Бассейны</b>\n(Генерализованные)")
+}
+
+' === Гидрологическое моделирование ===
+ZONE(flow, "Анализ стока и гидравлических параметров") {
+    
+    ' --- Блок SCS-CN ---
+    PARAM(cn_ref, "<b>Справочник перекодировки</b>\n(Покрытие+Гидрогруппа->CN)")
+    ARCPY(scs_calc, "<b>Расчет SCS-CN</b>\n(Номера кривых стока)")
+    RESULT(cn,"<b>SCS-CN</b>\n(Карта кривых стока)")
+    
+    ' --- Блок Маннинга ---
+    PARAM(manning_ref, "<b>Справочник перекодировки</b>\n(Покрытие->n Маннинга)")
+    ARCPY(manning_calc, "<b>Расчет шероховатости</b>\n(n Маннинга)")
+    RESULT(manning,"<b>Шероховатость (n)</b>")
+
+    ' --- Блок стока за 5 дней ---
+    ARCPY(runoff_calc_5, "<b>Расчет стока (SCS TR-55)</b>\n(Слой стока)")
+    RESULT(run_rx5,"<b>Сток Rx5Day</b>")
+    ARCPY(flow_acc_5_calc, "<b>Накопленние стока</b>\n(Flow Accumulation)")
+    RESULT(flow_acc_5,"<b>Накопленный сток</b>")
+    
+    ' --- Блок русловой сети ---
+    PARAM(watercourse_val, "<b>Порог руслоформирования</b>\n(Accumulation Threshold)")
+    ARCPY(watercourse_sel, "<b>Выделение водотоков</b>")
+    RESULT(watercourse,"<b>Основные водотоки</b>")
+    
+    ' --- Блок интенсивности ливня ---
+    TRANSFORM(idf_analyze, "<b>Анализ IDF-кривых</b>\n(Параметры ливня)")
+    RESULT(rain,"<b>Параметры ливня</b>\n(Длительность, пик)")
+    ARCPY(rain_intens_calc, "<b>Расчет интенсивности</b>")
+    RESULT(rx,"<b>Ливень (мм/сек)</b>")
+    
+    ' --- Блок гидравлики склонового стока ---
+    ARCPY(rainfall_acc_calc, "<b>Расчет удельного расхода</b>")
+    RESULT(rainfall_acc, "<b>Удельный расход (q)</b>")
+    ARCPY(flow_h_calc, "<b>Расчет глубины стока (h)</b>\n(Уравнение Маннинга)")
+    RESULT(flow_h, "<b>Глубина стока (м)</b>")
+    
+    ' --- Блок энергозатрат (Cost Distance) ---
+    PARAM(cost_hor_calc_param, "<b>Параметры потока</b>\n(v, h_base, R)")
+    ARCPY(cost_hor_calc, "<b>Расчет стоимости (W)</b>\n(Гидравлический уклон)")
+    RESULT(cost_hor, "<b>Гор. стоимость</b>")
+    TRANSFORM(vf_calc, "<b>Расчет Vert. Factor</b>")
+    FILE(vf, "<b>Вертикальный фактор</b>")
+    
+    TRANSFORM(split_bassin_stream, "<b>Разбиение бассейнов</b>")
+    ARCPY(split_cost_hor_calc, "<b>Разрезка по водоразделам</b>")
+    ARCPY(cost_acc_calc, "<b>Cost Accumulation</b>\n(От русла к водоразделу)")
+    RESULT(cost_acc,"<b>Энергозатраты до русла</b>\n(Напор, м)")
+}
+
+' === Связи ===
+landuse --> scs_calc
+soil --> scs_calc
+cn_ref .> scs_calc
+scs_calc --> cn
+
+landuse --> manning_calc
+manning_calc <. manning_ref
+manning_calc --> manning
+
+rx5_synonym --> runoff_calc_5
+cn --> runoff_calc_5
+runoff_calc_5 --> run_rx5
+run_rx5 --> flow_acc_5_calc
+fdir_synonym --> flow_acc_5_calc
+flow_acc_5_calc --> flow_acc_5
+
+flow_acc_5 --> watercourse_sel
+watercourse_val .> watercourse_sel
+watercourse_sel --> watercourse
+
+xrain --> idf_analyze
+idf_analyze --> rain
+rain --> rain_intens_calc
+cn --> rain_intens_calc
+rx1_synonym --> rain_intens_calc
+rain_intens_calc --> rx
+
+rx --> rainfall_acc_calc
+rainfall_acc_calc --> rainfall_acc
+rainfall_acc --> flow_h_calc
+manning --> flow_h_calc
+slope_synonym --> flow_h_calc
+flow_h_calc --> flow_h
+
+cost_hor_calc_param --> vf_calc
+vf_calc --> vf
+cost_hor_calc_param .> cost_hor_calc
+manning --> cost_hor_calc
+cost_hor_calc --> cost_hor
+
+basin_synonym --> split_bassin_stream
+split_bassin_stream --> split_cost_hor_calc
+cost_hor --> split_cost_hor_calc
+split_cost_hor_calc --> cost_acc_calc
+vf --> cost_acc_calc
+watercourse --> cost_acc_calc
+fill_synonym --> cost_acc_calc
+cost_acc_calc --> cost_acc
+
+@enduml

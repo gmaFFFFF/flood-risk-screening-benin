@@ -1,0 +1,29 @@
+@startuml flood_methods_pipeline
+skinparam monochrome true
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+package "ГИС-платформа" #F0F0F0 {
+  [Сбор и предобработка данных] as GIS_In
+  [Анализ и визуализация результатов] as GIS_Out
+  [ЦМР, Почвы, Растительность] as GIS_DB
+}
+
+package "Гидрологическое моделирование" #white {
+  [Метод SCS-CN] as Hydro_Model
+  [Расчет объемов стока (Q)] as Hydro_Res
+}
+
+package "Гидродинамическое моделирование" #white {
+  [Уравнения Сен-Венана (LISFLOOD-FP)] as Dynamic_Model
+  [Расчет глубины и векторов затопления] as Dynamic_Res
+}
+
+GIS_DB --> GIS_In
+GIS_In --> Hydro_Model : Параметры (CN, Ia)
+Hydro_Model --> Hydro_Res
+Hydro_Res --> Dynamic_Model : Гидрографы стока
+Dynamic_Model --> Dynamic_Res
+Dynamic_Res --> GIS_Out : Карты затопления (Raster/Vector)
+
+@enduml

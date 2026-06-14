@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background-color: white; font-family: sans-serif;">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; text-anchor: middle; fill: #333; }
+      .subtitle { font-size: 16px; fill: #555; text-anchor: middle; }
+      .axis { stroke: #999; stroke-width: 1; }
+      .label { font-size: 12px; fill: #666; }
+      .bar-and { fill: #4a90e2; }
+      .bar-or { fill: #50e3c2; }
+      .bar-prod { fill: #f5a623; }
+      .bar-gamma { fill: #d0021b; }
+      .grid { stroke: #e0e0e0; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <text x="400" y="40" class="title">Сравнение операторов нечёткой логики (Fuzzy Overlay)</text>
+  <text x="400" y="65" class="subtitle">Результаты агрегации для двух факторов (A и B)</text>
+
+  <!-- Legend -->
+  <g transform="translate(150, 90)">
+    <rect x="0" y="0" width="20" height="20" class="bar-and" />
+    <text x="30" y="15" class="label">Fuzzy AND (Min)</text>
+    
+    <rect x="130" y="0" width="20" height="20" class="bar-or" />
+    <text x="160" y="15" class="label">Fuzzy OR (Max)</text>
+    
+    <rect x="260" y="0" width="20" height="20" class="bar-prod" />
+    <text x="290" y="15" class="label">Fuzzy Product</text>
+    
+    <rect x="390" y="0" width="20" height="20" class="bar-gamma" />
+    <text x="420" y="15" class="label">Fuzzy Gamma (γ=0.9)</text>
+  </g>
+
+  <!-- Chart Area -->
+  <g transform="translate(80, 150)">
+    <!-- Y Axis & Grid -->
+    <line x1="0" y1="0" x2="0" y2="350" class="axis" />
+    <line x1="0" y1="350" x2="650" y2="350" class="axis" />
+    
+    <line x1="0" y1="0" x2="650" y2="0" class="grid" />
+    <text x="-10" y="5" text-anchor="end" class="label">1.0</text>
+    
+    <line x1="0" y1="87.5" x2="650" y2="87.5" class="grid" />
+    <text x="-10" y="92.5" text-anchor="end" class="label">0.75</text>
+    
+    <line x1="0" y1="175" x2="650" y2="175" class="grid" />
+    <text x="-10" y="180" text-anchor="end" class="label">0.5</text>
+    
+    <line x1="0" y1="262.5" x2="650" y2="262.5" class="grid" />
+    <text x="-10" y="267.5" text-anchor="end" class="label">0.25</text>
+    
+    <text x="-10" y="355" text-anchor="end" class="label">0.0</text>
+    <text x="-40" y="175" text-anchor="middle" transform="rotate(-90, -40, 175)" class="subtitle">Степень принадлежности</text>
+
+    <!-- Group 1: A=0.2, B=0.2 (Low, Low) -->
+    <g transform="translate(50, 0)">
+      <text x="60" y="375" text-anchor="middle" class="label">A=0.2, B=0.2</text>
+      <!-- AND: 0.2 -->
+      <rect x="10" y="280" width="25" height="70" class="bar-and" />
+      <!-- OR: 0.2 -->
+      <rect x="40" y="280" width="25" height="70" class="bar-or" />
+      <!-- PROD: 0.04 -->
+      <rect x="70" y="336" width="25" height="14" class="bar-prod" />
+      <!-- GAMMA (0.9): ~0.3 -->
+      <rect x="100" y="245" width="25" height="105" class="bar-gamma" />
+    </g>
+
+    <!-- Group 2: A=0.8, B=0.2 (High, Low) -->
+    <g transform="translate(200, 0)">
+      <text x="60" y="375" text-anchor="middle" class="label">A=0.8, B=0.2</text>
+      <!-- AND: 0.2 -->
+      <rect x="10" y="280" width="25" height="70" class="bar-and" />
+      <!-- OR: 0.8 -->
+      <rect x="40" y="70" width="25" height="280" class="bar-or" />
+      <!-- PROD: 0.16 -->
+      <rect x="70" y="294" width="25" height="56" class="bar-prod" />
+      <!-- GAMMA (0.9): ~0.7 -->
+      <rect x="100" y="105" width="25" height="245" class="bar-gamma" />
+    </g>
+
+    <!-- Group 3: A=0.6, B=0.6 (Med, Med) -->
+    <g transform="translate(350, 0)">
+      <text x="60" y="375" text-anchor="middle" class="label">A=0.6, B=0.6</text>
+      <!-- AND: 0.6 -->
+      <rect x="10" y="140" width="25" height="210" class="bar-and" />
+      <!-- OR: 0.6 -->
+      <rect x="40" y="140" width="25" height="210" class="bar-or" />
+      <!-- PROD: 0.36 -->
+      <rect x="70" y="224" width="25" height="126" class="bar-prod" />
+      <!-- GAMMA (0.9): ~0.78 -->
+      <rect x="100" y="77" width="25" height="273" class="bar-gamma" />
+    </g>
+
+    <!-- Group 4: A=0.9, B=0.9 (High, High) -->
+    <g transform="translate(500, 0)">
+      <text x="60" y="375" text-anchor="middle" class="label">A=0.9, B=0.9</text>
+      <!-- AND: 0.9 -->
+      <rect x="10" y="35" width="25" height="315" class="bar-and" />
+      <!-- OR: 0.9 -->
+      <rect x="40" y="35" width="25" height="315" class="bar-or" />
+      <!-- PROD: 0.81 -->
+      <rect x="70" y="66.5" width="25" height="283.5" class="bar-prod" />
+      <!-- GAMMA (0.9): ~0.98 -->
+      <rect x="100" y="7" width="25" height="343" class="bar-gamma" />
+    </g>
+  </g>
+
+</svg>

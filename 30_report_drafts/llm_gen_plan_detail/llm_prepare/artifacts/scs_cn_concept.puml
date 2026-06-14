@@ -1,0 +1,37 @@
+@startuml scs_cn_concept
+skinparam monochrome true
+skinparam shadowing false
+
+skinparam state {
+  BackgroundColor white
+  BorderColor black
+}
+
+[*] --> Осадки : P (Total Precipitation)
+
+state "Начальные потери (Ia)" as IA #F9F9F9 {
+  IA : Интерцепция
+  IA : Инфильтрация до насыщения
+  IA : Заполнение микрорельефа
+}
+
+state "Удержание влаги (F)" as F {
+  F : Фильтрация в почву
+  F : S (Max Potential Retention)
+}
+
+state "Поверхностный сток (Q)" as Q #D0E0FF {
+  Q : Direct Runoff
+}
+
+Осадки --> IA : P <= Ia (Сток = 0)
+Осадки --> Q : P > Ia
+Q --> F : Массовый баланс
+F --> [*] : Удержано
+
+note bottom of Q
+  Q = (P - Ia)^2 / (P - Ia + S)
+  Ia = 0.05 * S (Западная Африка)
+end note
+
+@enduml

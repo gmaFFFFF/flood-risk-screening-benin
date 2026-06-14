@@ -1,0 +1,38 @@
+@startuml
+skinparam handwritten false
+skinparam monochrome true
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+rectangle "Коэффициент стока (CN)" as CN #strategy
+
+rectangle "Подстилающая поверхность" as Surface {
+    rectangle "Тип почв (HSG)" as HSG
+    rectangle "Землепользование (LULC)" as LULC
+}
+
+rectangle "Гидрометеоусловия" as Weather {
+    rectangle "Предшествующее увлажнение (AMC)" as AMC
+}
+
+CN <-- Surface
+CN <-- Weather
+Surface <-- HSG
+Surface <-- LULC
+
+note right of HSG
+    Группы A, B, C, D
+    (Инфильтрация)
+end note
+
+note right of LULC
+    Растительность,
+    Шероховатость
+end note
+
+note left of AMC
+    Влажность почвы
+    перед дождем
+end note
+
+@enduml

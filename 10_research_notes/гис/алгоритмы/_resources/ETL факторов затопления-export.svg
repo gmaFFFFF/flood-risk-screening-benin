@@ -1,0 +1,5444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   data-diagram-type="CLASS"
+   height="1953px"
+   preserveAspectRatio="none"
+   style="width:2590px;height:1953px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 2590 1953"
+   width="2590.2px"
+   zoomAndPan="magnify"
+   id="svg1100"
+   sodipodi:docname="ETL факторов затопления-export.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1102"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="0.24167947"
+     inkscape:cx="1979.8951"
+     inkscape:cy="897.88348"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <title
+     id="title2">Подготовка данных для оценки факторов затопления</title>
+  <defs
+     id="defs4" />
+  <g
+     class="title"
+     data-source-line="115"
+     id="g8">
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="339.40021"
+       x="1119.1263"
+       y="22.596701"
+       id="text6"
+       transform="matrix(6,0,0,6,-6484.0443,-57.92524)">Подготовка данных для оценки факторов затопления</text>
+  </g>
+  <g
+     class="cluster"
+     data-entity="gee_chirps"
+     data-source-line="123"
+     data-uid="ent0004"
+     id="cluster_gee_chirps"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 9.9,260.5078 h 80.2898 a 6.75,6.75 0 0 1 4.5,4.5 l 6.3,15.2649 H 418.5 a 4.5,4.5 0 0 1 4.5,4.5 v 834.3351 a 4.5,4.5 0 0 1 -4.5,4.5 H 9.9 a 4.5,4.5 0 0 1 -4.5,-4.5 v -854.1 a 4.5,4.5 0 0 1 4.5,-4.5"
+       fill="#ffffff"
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       id="path132" />
+    <line
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       x1="5.4000001"
+       x2="100.9898"
+       y1="280.27271"
+       y2="280.27271"
+       id="line134" />
+    <text
+       fill="#808080"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="83.889801"
+       x="9"
+       y="273.9621"
+       id="text136">Расчет осадков</text>
+  </g>
+  <g
+     class="cluster"
+     data-entity="relief"
+     data-source-line="152"
+     data-uid="ent0027"
+     id="cluster_relief"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 449.1,267.7078 h 86.1645 a 6.75,6.75 0 0 1 4.5,4.5 l 6.3,15.2649 H 1237.5 a 4.5,4.5 0 0 1 4.5,4.5 v 1100.7351 a 4.5,4.5 0 0 1 -4.5,4.5 H 449.1 a 4.5,4.5 0 0 1 -4.5,-4.5 v -1120.5 a 4.5,4.5 0 0 1 4.5,-4.5"
+       fill="#ffffff"
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       id="path139" />
+    <line
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       x1="444.60001"
+       x2="546.06451"
+       y1="287.47269"
+       y2="287.47269"
+       id="line141" />
+    <text
+       fill="#808080"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="89.764503"
+       x="448.20001"
+       y="281.16211"
+       id="text143">Анализ рельефа</text>
+  </g>
+  <g
+     class="cluster"
+     data-entity="flow"
+     data-source-line="196"
+     data-uid="ent0062"
+     id="cluster_flow"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 1268.1,267.7078 h 67.9025 a 6.75,6.75 0 0 1 4.5,4.5 l 6.3,15.2649 H 2424.6 a 4.5,4.5 0 0 1 4.5,4.5 v 1561.5351 a 4.5,4.5 0 0 1 -4.5,4.5 H 1268.1 a 4.5,4.5 0 0 1 -4.5,-4.5 v -1581.3 a 4.5,4.5 0 0 1 4.5,-4.5"
+       fill="#ffffff"
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       id="path146" />
+    <line
+       style="stroke:#d3d3d3;stroke-width:1.35"
+       x1="1263.6"
+       x2="1346.8025"
+       y1="287.47269"
+       y2="287.47269"
+       id="line148" />
+    <text
+       fill="#808080"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="71.502502"
+       x="1267.2"
+       y="281.16211"
+       id="text150">Анализ стока</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="chirps"
+     data-source-line="124"
+     data-uid="ent0005"
+     id="entity_chirps"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 260.55,300.1078 c 0,-9 66.1852,-9 66.1852,-9 0,0 66.1851,0 66.1851,9 v 51.1945 c 0,9 -66.1851,9 -66.1851,9 0,0 -66.1852,0 -66.1852,-9 v -51.1945"
+       fill="#f0fff0"
+       style="stroke:#8fbc8f;stroke-width:0.45"
+       id="path153" />
+    <path
+       d="m 260.55,300.1078 c 0,9 66.1852,9 66.1852,9 0,0 66.1851,0 66.1851,-9"
+       fill="none"
+       style="stroke:#8fbc8f;stroke-width:0.45"
+       id="path155" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="30.0322"
+       x="311.71899"
+       y="324.36209"
+       id="text157">«gee»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="104.1768"
+       x="269.54999"
+       y="338.72699"
+       id="text159">Статистика CHIRPS</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="114.3703"
+       x="269.54999"
+       y="353.0918"
+       id="text161">(Многолетние данные)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="chirps_max1"
+     data-source-line="126"
+     data-uid="ent0006"
+     id="entity_chirps_max1"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="132.29649"
+       x="75.150002"
+       y="536.8078"
+       id="rect164" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="119.9856"
+       y="557.4621"
+       id="text166">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="114.2965"
+       x="84.150002"
+       y="571.82703"
+       id="text168">Годовые максимумы</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="60.950401"
+       x="84.150002"
+       y="586.19177"
+       id="text170">(1 день, мм)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="chirps_max5"
+     data-source-line="127"
+     data-uid="ent0007"
+     id="entity_chirps_max5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="132.29649"
+       x="260.54999"
+       y="536.8078"
+       id="rect173" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="305.38559"
+       y="557.4621"
+       id="text175">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="114.2965"
+       x="269.54999"
+       y="571.82703"
+       id="text177">Годовые максимумы</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="61.3564"
+       x="269.54999"
+       y="586.19177"
+       id="text179">(5 дней, мм)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="chirps_stat"
+     data-source-line="128"
+     data-uid="ent0008"
+     id="entity_chirps_stat"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="95.377098"
+       x="279.89999"
+       y="788.8078"
+       id="rect182" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="306.276"
+       y="809.4621"
+       id="text184">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="60.3703"
+       x="288.89999"
+       y="823.82703"
+       id="text186">Статистика</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="77.377098"
+       x="288.89999"
+       y="838.19177"
+       id="text188">(СКО, среднее)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rx1"
+     data-source-line="129"
+     data-uid="ent0009"
+     id="entity_rx1"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="124.2861"
+       x="117"
+       y="1048.0078"
+       id="rect191" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="157.83051"
+       y="1068.6621"
+       id="text193">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="39.624599"
+       x="126"
+       y="1083.027"
+       id="text195">Rx1Day</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="106.2861"
+       x="126"
+       y="1097.3918"
+       id="text197">(Макс. суточные, мм)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rx5"
+     data-source-line="130"
+     data-uid="ent0010"
+     id="entity_rx5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="126.617"
+       x="273.14999"
+       y="1048.0078"
+       id="rect200" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="315.1459"
+       y="1068.6621"
+       id="text202">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="39.624599"
+       x="282.14999"
+       y="1083.027"
+       id="text204">Rx5Day</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="108.617"
+       x="282.14999"
+       y="1097.3918"
+       id="text206">(Макс. за 5 суток, мм)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="selectMax"
+     data-source-line="132"
+     data-uid="ent0011"
+     id="entity_selectMax"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="185.9854"
+       x="26.549999"
+       y="414.40781"
+       id="rect209" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="88.932999"
+       y="435.0621"
+       id="text211">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="167.9854"
+       x="35.549999"
+       y="449.427"
+       id="text213">Выборка годовых максимумов</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="145.6102"
+       x="35.549999"
+       y="463.79181"
+       id="text215">(Облачная обработка (GEE))</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="selectMax5"
+     data-source-line="133"
+     data-uid="ent0012"
+     id="entity_selectMax5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="163.6102"
+       x="244.8"
+       y="414.40781"
+       id="rect218" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="295.99539"
+       y="435.0621"
+       id="text220">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="132.2525"
+       x="253.8"
+       y="449.427"
+       id="text222">Скользящее окно 5 дней</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="145.6102"
+       x="253.8"
+       y="463.79181"
+       id="text224">(Облачная обработка (GEE))</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="calc_stat"
+     data-source-line="134"
+     data-uid="ent0013"
+     id="entity_calc_stat"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="163.6102"
+       x="244.8"
+       y="666.40778"
+       id="rect227" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="295.99539"
+       y="687.06207"
+       id="text229">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="98.992996"
+       x="253.8"
+       y="701.427"
+       id="text231">Расчет статистики</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="145.6102"
+       x="253.8"
+       y="715.79181"
+       id="text233">(Облачная обработка (GEE))</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="approx"
+     data-source-line="135"
+     data-uid="ent0014"
+     id="entity_approx"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="157.72501"
+       x="250.64999"
+       y="911.20782"
+       id="rect236" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="298.9028"
+       y="931.86212"
+       id="text238">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="85.667"
+       x="259.64999"
+       y="946.22699"
+       id="text240">Аппроксимация</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="139.72501"
+       x="259.64999"
+       y="960.5918"
+       id="text242">(Распределением Гумбеля)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="ari"
+     data-source-line="137"
+     data-uid="ent0015"
+     id="entity_ari"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#fffacd"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#ffd700;stroke-width:0.45"
+       width="198.5625"
+       x="20.25"
+       y="911.20782"
+       id="rect245" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="43.8223"
+       x="97.620102"
+       y="931.86212"
+       id="text247">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="80.767998"
+       x="29.25"
+       y="946.22699"
+       id="text249">Расчетный ARI</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="180.5625"
+       x="29.25"
+       y="960.5918"
+       id="text251">(Расчетный период повторяемости)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="dem"
+     data-source-line="153"
+     data-uid="ent0028"
+     id="entity_dem"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 761.4,307.3078 c 0,-9 36,-9 36,-9 0,0 36,0 36,9 v 36.8297 c 0,9 -36,9 -36,9 0,0 -36,0 -36,-9 v -36.8297"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path254" />
+    <path
+       d="m 761.4,307.3078 c 0,9 36,9 36,9 0,0 36,0 36,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path256" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="54"
+       x="770.40002"
+       y="331.5621"
+       id="text258">TanDEM-X</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="31.3822"
+       x="770.40002"
+       y="345.927"
+       id="text260">(ЦМР)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fill"
+     data-source-line="155"
+     data-uid="ent0029"
+     id="entity_fill"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="146.8037"
+       x="724.04999"
+       y="536.8078"
+       id="rect263" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="776.13928"
+       y="557.4621"
+       id="text265">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="24.0891"
+       x="733.04999"
+       y="571.82703"
+       id="text267">ЦМР</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="128.8037"
+       x="733.04999"
+       y="586.19177"
+       id="text269">(ЦМР с гидрокоррекцией)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="slope"
+     data-source-line="156"
+     data-uid="ent0030"
+     id="entity_slope"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="62.425201"
+       x="697.04999"
+       y="788.8078"
+       id="rect272" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="706.95001"
+       y="809.4621"
+       id="text274">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="32.104698"
+       x="712.21033"
+       y="823.82703"
+       id="text276">Уклон</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="25.534"
+       x="712.21033"
+       y="838.19177"
+       id="text278">(в %)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fdir"
+     data-source-line="157"
+     data-uid="ent0031"
+     id="entity_fdir"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="121.9131"
+       x="490.04999"
+       y="788.8078"
+       id="rect281" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="529.69391"
+       y="809.4621"
+       id="text283">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="103.9131"
+       x="499.04999"
+       y="823.82703"
+       id="text285">Направление стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="74.613899"
+       x="499.04999"
+       y="838.19177"
+       id="text287">(Формат «D8»)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="basin_raw"
+     data-source-line="158"
+     data-uid="ent0032"
+     id="entity_basin_raw"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="149.5564"
+       x="492.29999"
+       y="1048.0078"
+       id="rect290" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="545.76562"
+       y="1068.6621"
+       id="text292">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="131.5564"
+       x="501.29999"
+       y="1083.027"
+       id="text294">Водосборные бассейны</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="64.098602"
+       x="501.29999"
+       y="1097.3918"
+       id="text296">(Первичные)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="basin"
+     data-source-line="159"
+     data-uid="ent0033"
+     id="entity_basin"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="149.5564"
+       x="503.10001"
+       y="1321.6078"
+       id="rect299" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="556.56561"
+       y="1342.2621"
+       id="text301">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="131.5564"
+       x="512.09998"
+       y="1356.627"
+       id="text303">Водосборные бассейны</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="103.7654"
+       x="512.09998"
+       y="1370.9918"
+       id="text305">(Генерализованные)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="hand"
+     data-source-line="160"
+     data-uid="ent0034"
+     id="entity_hand"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="142.875"
+       x="1073.25"
+       y="796.00781"
+       id="rect308" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1123.3749"
+       y="816.66211"
+       id="text310">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="124.875"
+       x="1082.25"
+       y="831.02698"
+       id="text312">Высота над водотоком</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="twi"
+     data-source-line="161"
+     data-uid="ent0035"
+     id="entity_twi"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="191.81779"
+       x="819.45001"
+       y="796.00781"
+       id="rect315" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="894.04633"
+       y="816.66211"
+       id="text317">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="173.81779"
+       x="828.45001"
+       y="831.02698"
+       id="text319">Локальные понижения рельефа</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fill_p"
+     data-source-line="163"
+     data-uid="ent0036"
+     id="entity_fill_p"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="201.0621"
+       x="697.04999"
+       y="414.40781"
+       id="rect322" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="777.17291"
+       y="435.0621"
+       id="text324">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="88.999802"
+       x="706.04999"
+       y="449.427"
+       id="text326">Гидрокоррекция</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="183.0621"
+       x="706.04999"
+       y="463.79181"
+       id="text328">(Заполнение локальных понижений)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="slope_p"
+     data-source-line="164"
+     data-uid="ent0037"
+     id="entity_slope_p"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="95.181999"
+       x="652.5"
+       y="666.40778"
+       id="rect331" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="679.6828"
+       y="687.06207"
+       id="text333">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="77.181999"
+       x="661.5"
+       y="701.427"
+       id="text335">Расчет уклона</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="25.534"
+       x="661.5"
+       y="715.79181"
+       id="text337">(в %)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fdir_p"
+     data-source-line="165"
+     data-uid="ent0038"
+     id="entity_fdir_p"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="160.715"
+       x="459.45001"
+       y="673.60779"
+       id="rect340" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="519.39929"
+       y="694.26208"
+       id="text342">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="142.715"
+       x="468.45001"
+       y="708.62701"
+       id="text344">Расчет направления стока</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="basin_calc"
+     data-source-line="166"
+     data-uid="ent0039"
+     id="entity_basin_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="192.1922"
+       x="465.29999"
+       y="918.40778"
+       id="rect347" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="540.98792"
+       y="939.06207"
+       id="text349">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="174.1922"
+       x="474.29999"
+       y="953.427"
+       id="text351">Расчет водосборных бассейнов</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="basin_gen_calc"
+     data-source-line="167"
+     data-uid="ent0040"
+     id="entity_basin_gen_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="237.12711"
+       x="459.45001"
+       y="1192.0078"
+       id="rect354" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="557.60541"
+       y="1212.6621"
+       id="text356">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="219.12711"
+       x="468.45001"
+       y="1227.027"
+       id="text358">Генерализация водосборных бассейнов</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="113.3842"
+       x="468.45001"
+       y="1241.3918"
+       id="text360">(Полуавтоматическая)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="hand_calc"
+     data-source-line="168"
+     data-uid="ent0041"
+     id="entity_hand_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="184.71449"
+       x="1042.65"
+       y="666.40778"
+       id="rect363" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1114.599"
+       y="687.06207"
+       id="text365">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="166.71449"
+       x="1051.65"
+       y="701.427"
+       id="text367">Расчет высоты над водотоком</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="155.1234"
+       x="1051.65"
+       y="715.79181"
+       id="text369">(Внешний Topography Toolbox)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="twi_calc"
+     data-source-line="169"
+     data-uid="ent0042"
+     id="entity_twi_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="231.2209"
+       x="779.84998"
+       y="666.40778"
+       id="rect372" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="875.05219"
+       y="687.06207"
+       id="text374">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="213.2209"
+       x="788.84998"
+       y="701.427"
+       id="text376">Расчет локальных понижений рельефа</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="155.1234"
+       x="788.84998"
+       y="715.79181"
+       id="text378">(Внешний Topography Toolbox)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="watercourse_synonym"
+     data-source-line="182"
+     data-uid="ent0053"
+     id="entity_watercourse_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="127.5398"
+       x="1071"
+       y="544.00781"
+       id="rect381" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="1120.3604"
+       y="564.66211"
+       id="text383">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="109.5398"
+       x="1080"
+       y="579.02698"
+       id="text385">Основные водотоки</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="landuse"
+     data-source-line="197"
+     data-uid="ent0063"
+     id="entity_landuse"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 1757.7,307.3078 c 0,-9 39.6018,-9 39.6018,-9 0,0 39.6017,0 39.6017,9 v 36.8297 c 0,9 -39.6017,9 -39.6017,9 0,0 -39.6018,0 -39.6018,-9 v -36.8297"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path388" />
+    <path
+       d="m 1757.7,307.3078 c 0,9 39.6018,9 39.6018,9 0,0 39.6017,0 39.6017,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path390" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="61.203499"
+       x="1766.7"
+       y="331.5621"
+       id="text392">WorldCover</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="56.283401"
+       x="1766.7"
+       y="345.927"
+       id="text394">(Покрытия)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="soil"
+     data-source-line="198"
+     data-uid="ent0064"
+     id="entity_soil"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 1979.1,307.3078 c 0,-9 44.0631,-9 44.0631,-9 0,0 44.0631,0 44.0631,9 v 36.8297 c 0,9 -44.0631,9 -44.0631,9 0,0 -44.0631,0 -44.0631,-9 v -36.8297"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path397" />
+    <path
+       d="m 1979.1,307.3078 c 0,9 44.0631,9 44.0631,9 0,0 44.0631,0 44.0631,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path399" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="61.804699"
+       x="1988.1"
+       y="331.5621"
+       id="text401">HiHydroSoil</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="70.126198"
+       x="1988.1"
+       y="345.927"
+       id="text403">(Группы почв)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="xrain"
+     data-source-line="199"
+     data-uid="ent0065"
+     id="entity_xrain"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 2099.25,307.3078 c 0,-9 63.3059,-9 63.3059,-9 0,0 63.3058,0 63.3058,9 v 36.8297 c 0,9 -63.3058,9 -63.3058,9 0,0 -63.3059,0 -63.3059,-9 v -36.8297"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path406" />
+    <path
+       d="m 2099.25,307.3078 c 0,9 63.3059,9 63.3059,9 0,0 63.3058,0 63.3058,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path408" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="93.977898"
+       x="2108.25"
+       y="331.5621"
+       id="text410">Статистика XRain</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="108.6117"
+       x="2108.25"
+       y="345.927"
+       id="text412">(Кривые IDF осадков)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cn"
+     data-source-line="201"
+     data-uid="ent0066"
+     id="entity_cn"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="93.114799"
+       x="2020.05"
+       y="536.8078"
+       id="rect415" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2045.2948"
+       y="557.4621"
+       id="text417">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="41.401798"
+       x="2029.05"
+       y="571.82703"
+       id="text419">SCS-CN</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="75.114799"
+       x="2029.05"
+       y="586.19177"
+       id="text421">(Кривые стока)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="manning"
+     data-source-line="202"
+     data-uid="ent0067"
+     id="entity_manning"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="119.9145"
+       x="1620.45"
+       y="788.8078"
+       id="rect424" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1659.0946"
+       y="809.4621"
+       id="text426">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="101.9145"
+       x="1629.45"
+       y="823.82703"
+       id="text428">Шероховатость (n)</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="70.316002"
+       x="1629.45"
+       y="838.19177"
+       id="text430">(по Маннингу)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="run_rx5"
+     data-source-line="203"
+     data-uid="ent0068"
+     id="entity_run_rx5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="98.8629"
+       x="2106"
+       y="788.8078"
+       id="rect433" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2134.1189"
+       y="809.4621"
+       id="text435">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="67.716202"
+       x="2115"
+       y="823.82703"
+       id="text437">Сток Rx5Day</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="80.8629"
+       x="2115"
+       y="838.19177"
+       id="text439">(Слой в метрах)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="flow_acc_5"
+     data-source-line="204"
+     data-uid="ent0069"
+     id="entity_flow_acc_5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="161.0314"
+       x="1933.65"
+       y="1048.0078"
+       id="rect442" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1992.8531"
+       y="1068.6621"
+       id="text444">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="143.0314"
+       x="1942.65"
+       y="1083.027"
+       id="text446">Накопленный сток Rx5Day</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="51.721901"
+       x="1942.65"
+       y="1097.3918"
+       id="text448">(в метрах)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="watercourse"
+     data-source-line="205"
+     data-uid="ent0070"
+     id="entity_watercourse"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="127.5398"
+       x="1878.3"
+       y="1328.8077"
+       id="rect451" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1920.7573"
+       y="1349.4622"
+       id="text453">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="109.5398"
+       x="1887.3"
+       y="1363.827"
+       id="text455">Основные водотоки</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rain"
+     data-source-line="206"
+     data-uid="ent0071"
+     id="entity_rain"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="75.459396"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="180.8965"
+       x="2144.25"
+       y="529.60779"
+       id="rect458" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2213.3855"
+       y="550.26208"
+       id="text460">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="138.9709"
+       x="2153.25"
+       y="564.62701"
+       id="text462">Max интенсивный ливень</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="162.8965"
+       x="2153.25"
+       y="578.99182"
+       id="text464">(Длительность, доля от Rx1Day,</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="83.346703"
+       x="2153.25"
+       y="593.35663"
+       id="text466">поправка за пик)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rx"
+     data-source-line="207"
+     data-uid="ent0072"
+     id="entity_rx"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="173.8195"
+       x="2240.55"
+       y="788.8078"
+       id="rect469" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2306.1472"
+       y="809.4621"
+       id="text471">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="40.025398"
+       x="2249.55"
+       y="823.82703"
+       id="text473">Ливень</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="155.8195"
+       x="2249.55"
+       y="838.19177"
+       id="text475">(Интенсивность ливня, мм/сек)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rainfall_acc"
+     data-source-line="208"
+     data-uid="ent0073"
+     id="entity_rainfall_acc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="172.96519"
+       x="2241.8999"
+       y="1048.0078"
+       id="rect478" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2307.0701"
+       y="1068.6621"
+       id="text480">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="154.96519"
+       x="2250.8999"
+       y="1083.027"
+       id="text482">Удельный расход при ливне</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="26.615"
+       x="2250.8999"
+       y="1097.3918"
+       id="text484">(м²/с)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="flow_h"
+     data-source-line="209"
+     data-uid="ent0074"
+     id="entity_flow_h"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="95.134598"
+       x="2300.3999"
+       y="1321.6078"
+       id="rect487" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="2326.6548"
+       y="1342.2621"
+       id="text489">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="77.134598"
+       x="2309.3999"
+       y="1356.627"
+       id="text491">Глубина стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="14.618"
+       x="2309.3999"
+       y="1370.9918"
+       id="text493">(м)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_hor"
+     data-source-line="210"
+     data-uid="ent0075"
+     id="entity_cost_hor"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="89.824203"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="172.4063"
+       x="1511.1"
+       y="1033.6078"
+       id="rect496" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1575.9905"
+       y="1054.2621"
+       id="text498">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="148.1256"
+       x="1520.1"
+       y="1068.627"
+       id="text500">Горизонтальная стоимость</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="117.0861"
+       x="1520.1"
+       y="1082.9918"
+       id="text502">(Гидравлический уклон</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="154.4063"
+       x="1520.1"
+       y="1097.3566"
+       id="text504">при горизонтальном движении</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="21.4471"
+       x="1520.1"
+       y="1111.7216"
+       id="text506">м/м)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="vf"
+     data-source-line="211"
+     data-uid="ent0076"
+     id="entity_vf"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#f5f5f5"
+       height="49.429699"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#a9a9a9;stroke-width:0.45"
+       width="148.97459"
+       x="1697.4"
+       y="1327.4578"
+       id="rect509" />
+    <polygon
+       fill="#f5f5f5"
+       points="1841.8746,1337.3578 1836.4746,1331.9578 1831.0746,1331.9578 1831.0746,1344.5578 1841.8746,1344.5578 "
+       style="stroke:#a9a9a9;stroke-width:0.45"
+       id="polygon511" />
+    <line
+       style="stroke:#a9a9a9;stroke-width:0.45"
+       x1="1836.4746"
+       x2="1836.4746"
+       y1="1331.9578"
+       y2="1337.3578"
+       id="line513" />
+    <line
+       style="stroke:#a9a9a9;stroke-width:0.45"
+       x1="1841.8746"
+       x2="1836.4746"
+       y1="1337.3578"
+       y2="1337.3578"
+       id="line515" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="29.415199"
+       x="1752.6797"
+       y="1350.8121"
+       id="text517">«File»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="121.9746"
+       x="1706.4"
+       y="1365.177"
+       id="text519">Вертикальный фактор</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="split_cost_hor"
+     data-source-line="212"
+     data-uid="ent0077"
+     id="entity_split_cost_hor"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="203.75681"
+       x="1462.5"
+       y="1328.8077"
+       id="rect522" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1543.0658"
+       y="1349.4622"
+       id="text524">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="185.75681"
+       x="1471.5"
+       y="1363.827"
+       id="text526">Тайлы горизонтальной стоимости</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_acc_split"
+     data-source-line="213"
+     data-uid="ent0078"
+     id="entity_cost_acc_split"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="191.7756"
+       x="1420.65"
+       y="1552.0078"
+       id="rect529" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1495.2252"
+       y="1572.6621"
+       id="text531">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="132.02049"
+       x="1429.65"
+       y="1587.027"
+       id="text533">Расстояние до водотока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="173.7756"
+       x="1429.65"
+       y="1601.3918"
+       id="text535">(Напор для достижения ячейки, м)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_acc"
+     data-source-line="214"
+     data-uid="ent0079"
+     id="entity_cost_acc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#90ee90"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#3cb371;stroke-width:0.45"
+       width="191.7756"
+       x="1302.75"
+       y="1782.4078"
+       id="rect538" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.625198"
+       x="1377.3252"
+       y="1803.0621"
+       id="text540">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="132.02049"
+       x="1311.75"
+       y="1817.427"
+       id="text542">Расстояние до водотока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="173.7756"
+       x="1311.75"
+       y="1831.7917"
+       id="text544">(Напор для достижения ячейки, м)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="scs_calc"
+     data-source-line="216"
+     data-uid="ent0080"
+     id="entity_scs_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="155.1568"
+       x="1945.8"
+       y="414.40781"
+       id="rect547" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2002.9702"
+       y="435.0621"
+       id="text549">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="137.1568"
+       x="1954.8"
+       y="449.427"
+       id="text551">Перекодировка в SCS-CN</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="77.978302"
+       x="1954.8"
+       y="463.79181"
+       id="text553">(Номер кривой)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="manning_calc"
+     data-source-line="217"
+     data-uid="ent0081"
+     id="entity_manning_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="197.02789"
+       x="1581.75"
+       y="666.40778"
+       id="rect556" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1659.8558"
+       y="687.06207"
+       id="text558">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="179.02789"
+       x="1590.75"
+       y="701.427"
+       id="text560">Перекодировка в шероховатость</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="65.074203"
+       x="1590.75"
+       y="715.79181"
+       id="text562">(n Маннинга)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="runoff_calc_5"
+     data-source-line="218"
+     data-uid="ent0082"
+     id="entity_runoff_calc_5"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="75.459396"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="136.35699"
+       x="2010.6"
+       y="659.20782"
+       id="rect565" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2058.3704"
+       y="679.86212"
+       id="text567">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="118.357"
+       x="2019.6"
+       y="694.22699"
+       id="text569">Расчет стока с ячейки</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="77.825401"
+       x="2019.6"
+       y="708.5918"
+       id="text571">(Методика SCS</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="107.2986"
+       x="2019.6"
+       y="722.9566"
+       id="text573">(известна как TR-55))</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="flow_acc_5_calc"
+     data-source-line="219"
+     data-uid="ent0083"
+     id="entity_flow_acc_5_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="121.1959"
+       x="2094.75"
+       y="911.20782"
+       id="rect576" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2134.9397"
+       y="931.86212"
+       id="text578">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="103.1959"
+       x="2103.75"
+       y="946.22699"
+       id="text580">Накопленние стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="97.827499"
+       x="2103.75"
+       y="960.5918"
+       id="text582">(Flow Accumulation)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="watercourse_sel"
+     data-source-line="220"
+     data-uid="ent0084"
+     id="entity_watercourse_sel"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="75.459396"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="172.1689"
+       x="1856.25"
+       y="1184.8077"
+       id="rect585" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1921.9263"
+       y="1205.4622"
+       id="text587">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="122.1381"
+       x="1865.25"
+       y="1219.827"
+       id="text589">Выделение водотоков</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="154.1689"
+       x="1865.25"
+       y="1234.1918"
+       id="text591">Опционально упорядочивание</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="77.519501"
+       x="1865.25"
+       y="1248.5566"
+       id="text593">и векторизация</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="idf_analyze"
+     data-source-line="221"
+     data-uid="ent0085"
+     id="entity_idf_analyze"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="190.0195"
+       x="2136.1499"
+       y="414.40781"
+       id="rect596" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="2200.55"
+       y="435.0621"
+       id="text598">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="172.0195"
+       x="2145.1499"
+       y="449.427"
+       id="text600">Визуальный анализ кривых IDF</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="164.41"
+       x="2145.1499"
+       y="463.79181"
+       id="text602">(Поиск max интенсивного ливня)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rain_intens_calc"
+     data-source-line="222"
+     data-uid="ent0086"
+     id="entity_rain_intens_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="207.3744"
+       x="2193.3"
+       y="673.60779"
+       id="rect605" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2276.5791"
+       y="694.26208"
+       id="text607">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="189.3744"
+       x="2202.3"
+       y="708.62701"
+       id="text609">Расчет интенсивности стока ливня</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rainfall_acc_calc"
+     data-source-line="223"
+     data-uid="ent0087"
+     id="entity_rainfall_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="161.44279"
+       x="2247.75"
+       y="911.20782"
+       id="rect612" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2308.0632"
+       y="931.86212"
+       id="text614">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="143.44279"
+       x="2256.75"
+       y="946.22699"
+       id="text616">Расчет удельного расхода</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="58.123798"
+       x="2256.75"
+       y="960.5918"
+       id="text618">(при ливне)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="flow_h_calc"
+     data-source-line="224"
+     data-uid="ent0088"
+     id="entity_flow_h_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="89.824203"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="152.093"
+       x="2252.25"
+       y="1177.6078"
+       id="rect621" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="2307.8882"
+       y="1198.2621"
+       id="text623">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="118.51"
+       x="2261.25"
+       y="1212.627"
+       id="text625">Расчет глубины стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="112.2398"
+       x="2261.25"
+       y="1226.9918"
+       id="text627">(Для склонового стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="71.486702"
+       x="2261.25"
+       y="1241.3566"
+       id="text629">соответствует</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="134.093"
+       x="2261.25"
+       y="1255.7216"
+       id="text631">гидравлическому радиусу)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_hor_calc"
+     data-source-line="225"
+     data-uid="ent0089"
+     id="entity_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="205.2123"
+       x="1494.9"
+       y="911.20782"
+       id="rect634" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1577.0979"
+       y="931.86212"
+       id="text636">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="187.2123"
+       x="1503.9"
+       y="946.22699"
+       id="text638">Расчет горизонтальной стоимости</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="130.57561"
+       x="1503.9"
+       y="960.5918"
+       id="text640">(Гидравлического уклона)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="vf_calc"
+     data-source-line="226"
+     data-uid="ent0090"
+     id="entity_vf_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="186.43359"
+       x="1715.85"
+       y="1055.2078"
+       id="rect643" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="1778.4572"
+       y="1075.8621"
+       id="text645">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="168.43359"
+       x="1724.85"
+       y="1090.2271"
+       id="text647">Расчет вертикального фактора</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="split_bassin_stream"
+     data-source-line="227"
+     data-uid="ent0091"
+     id="entity_split_bassin_stream"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffdab9"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#f4a460;stroke-width:0.45"
+       width="200.8459"
+       x="1278.45"
+       y="1048.0078"
+       id="rect650" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="61.219299"
+       x="1348.2633"
+       y="1068.6621"
+       id="text652">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="178.1842"
+       x="1287.45"
+       y="1083.027"
+       id="text654">Разрезать бассейны водотоками</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="182.8459"
+       x="1287.45"
+       y="1097.3918"
+       id="text656">(Для бассейнов свыше 100 тыс. км²)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="split_cost_hor_calc"
+     data-source-line="228"
+     data-uid="ent0092"
+     id="entity_split_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="169.9857"
+       x="1479.15"
+       y="1192.0078"
+       id="rect659" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1543.7347"
+       y="1212.6621"
+       id="text661">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="151.9857"
+       x="1488.15"
+       y="1227.027"
+       id="text663">Разрезать по водоразделам</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="133.81351"
+       x="1488.15"
+       y="1241.3918"
+       id="text665">(Для производительности)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_acc_calc"
+     data-source-line="229"
+     data-uid="ent0093"
+     id="entity_cost_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="197.3338"
+       x="1465.65"
+       y="1436.8077"
+       id="rect668" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1543.9087"
+       y="1457.4622"
+       id="text670">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="138.1113"
+       x="1474.65"
+       y="1471.827"
+       id="text672">Накопление энергозатрат</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="179.3338"
+       x="1474.65"
+       y="1486.1918"
+       id="text674">(Движение от русла к водоразделу)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_acc_mosaic"
+     data-source-line="230"
+     data-uid="ent0094"
+     id="entity_cost_acc_mosaic"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#e6e6fa"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#9370d8;stroke-width:0.45"
+       width="107.1369"
+       x="1368.45"
+       y="1667.2078"
+       id="rect677" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="40.816399"
+       x="1401.6104"
+       y="1687.8621"
+       id="text679">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="89.136902"
+       x="1377.45"
+       y="1702.2271"
+       id="text681">Сшивка мозаики</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="3.0006001"
+       x="1377.45"
+       y="1716.5918"
+       id="text683"> </text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cn_ref"
+     data-source-line="232"
+     data-uid="ent0095"
+     id="entity_cn_ref"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#fffacd"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#ffd700;stroke-width:0.45"
+       width="169.4953"
+       x="1745.1"
+       y="414.40781"
+       id="rect686" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="43.8223"
+       x="1807.9365"
+       y="435.0621"
+       id="text688">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="150.5092"
+       x="1754.1"
+       y="449.427"
+       id="text690">Справочник перекодировки</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="151.4953"
+       x="1754.1"
+       y="463.79181"
+       id="text692">(Покрытие+Гидрогруппа-&gt;CN)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="manning_ref"
+     data-source-line="233"
+     data-uid="ent0096"
+     id="entity_manning_ref"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#fffacd"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#ffd700;stroke-width:0.45"
+       width="168.5092"
+       x="1810.35"
+       y="666.40778"
+       id="rect695" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="43.8223"
+       x="1872.6935"
+       y="687.06207"
+       id="text697">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="150.5092"
+       x="1819.35"
+       y="701.427"
+       id="text699">Справочник перекодировки</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="124.2264"
+       x="1819.35"
+       y="715.79181"
+       id="text701">(Покрытие-&gt;n Маннинга)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="watercourse_val"
+     data-source-line="234"
+     data-uid="ent0097"
+     id="entity_watercourse_val"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#fffacd"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#ffd700;stroke-width:0.45"
+       width="160.7361"
+       x="2059.6499"
+       y="1192.0078"
+       id="rect704" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="43.8223"
+       x="2118.1069"
+       y="1212.6621"
+       id="text706">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="142.7361"
+       x="2068.6499"
+       y="1227.027"
+       id="text708">Сток руслоформирования</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="131.39301"
+       x="2068.6499"
+       y="1241.3918"
+       id="text710">(Для Бенина принят 7561)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cost_hor_calc_param"
+     data-source-line="235"
+     data-uid="ent0098"
+     id="entity_cost_hor_calc_param"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#fffacd"
+       height="75.459396"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#ffd700;stroke-width:0.45"
+       width="179.19321"
+       x="1732.05"
+       y="904.00781"
+       id="rect713" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="43.8223"
+       x="1799.7354"
+       y="924.66211"
+       id="text715">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="161.19321"
+       x="1741.05"
+       y="939.02698"
+       id="text717">Расчетные параметры потока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="137.1832"
+       x="1741.05"
+       y="953.39178"
+       id="text719">(скорость (м/с), глубина (м)</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="112.7145"
+       x="1744.0507"
+       y="967.75659"
+       id="text721">базовый гидрорадиус)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rx5_synonym"
+     data-source-line="242"
+     data-uid="ent0103"
+     id="entity_rx5_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="56.422298"
+       x="1931.85"
+       y="544.00781"
+       id="rect724" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="1945.6515"
+       y="564.66211"
+       id="text726">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="38.422298"
+       x="1940.85"
+       y="579.02698"
+       id="text728">Rx5day</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fdir_synonym"
+     data-source-line="249"
+     data-uid="ent0108"
+     id="entity_fdir_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="121.9131"
+       x="1952.55"
+       y="788.8078"
+       id="rect731" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="1999.0969"
+       y="809.4621"
+       id="text733">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="103.9131"
+       x="1961.55"
+       y="823.82703"
+       id="text735">Направление стока</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="74.613899"
+       x="1961.55"
+       y="838.19177"
+       id="text737">(Формат «D8»)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="rx1_synonym"
+     data-source-line="262"
+     data-uid="ent0118"
+     id="entity_rx1_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="46.729698"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="57.624599"
+       x="2357.1001"
+       y="544.00781"
+       id="rect740" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="2371.5027"
+       y="564.66211"
+       id="text742">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="39.624599"
+       x="2366.1001"
+       y="579.02698"
+       id="text744">Rx1Day</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="slope_synonym"
+     data-source-line="276"
+     data-uid="ent0128"
+     id="entity_slope_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="50.104698"
+       x="2160"
+       y="1048.0078"
+       id="rect747" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="2170.6426"
+       y="1068.6621"
+       id="text749">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="32.104698"
+       x="2169"
+       y="1083.027"
+       id="text751">Уклон</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="25.534"
+       x="2169"
+       y="1097.3918"
+       id="text753">(в %)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="basin_synonym"
+     data-source-line="289"
+     data-uid="ent0137"
+     id="entity_basin_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="149.5564"
+       x="1304.1"
+       y="911.20782"
+       id="rect756" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="1364.4686"
+       y="931.86212"
+       id="text758">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="131.5564"
+       x="1313.1"
+       y="946.22699"
+       id="text760">Водосборные бассейны</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="103.7654"
+       x="1313.1"
+       y="960.5918"
+       id="text762">(Генерализованные)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="fill_synonym"
+     data-source-line="299"
+     data-uid="ent0144"
+     id="entity_fill_synonym"
+     transform="translate(6.2060887,-144.81992)">
+    <rect
+       fill="#ffffff"
+       height="61.094501"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#708090;stroke-width:0.45;stroke-dasharray:6.3, 6.3"
+       width="146.8037"
+       x="1283.85"
+       y="1321.6078"
+       id="rect765" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="28.8193"
+       x="1342.8422"
+       y="1342.2621"
+       id="text767">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="24.0891"
+       x="1292.85"
+       y="1356.627"
+       id="text769">ЦМР</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="128.8037"
+       x="1292.85"
+       y="1370.9918"
+       id="text771">(ЦМР с гидрокоррекцией)</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="factors"
+     data-source-line="120"
+     data-uid="ent0002"
+     id="entity_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       d="m 1269.9,1906.6078 c 0,-9 65.7264,-9 65.7264,-9 0,0 65.7263,0 65.7263,9 v 22.4649 c 0,9 -65.7263,9 -65.7263,9 0,0 -65.7264,0 -65.7264,-9 v -22.4649"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path774" />
+    <path
+       d="m 1269.9,1906.6078 c 0,9 65.7264,9 65.7264,9 0,0 65.7263,0 65.7263,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path776" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="113.4527"
+       x="1278.9"
+       y="1930.8621"
+       id="text778">Факторы затопления</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="factors_p"
+     data-source-line="121"
+     data-uid="ent0003"
+     id="entity_factors_p"
+     transform="translate(-154.33501,293.13638)">
+    <path
+       d="m 2443.5,1448.9578 c 0,-9 65.7264,-9 65.7264,-9 0,0 65.7263,0 65.7263,9 v 36.8297 c 0,9 -65.7263,9 -65.7263,9 0,0 -65.7264,0 -65.7264,-9 v -36.8297"
+       fill="#ffb6c1"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path781" />
+    <path
+       d="m 2443.5,1448.9578 c 0,9 65.7264,9 65.7264,9 0,0 65.7263,0 65.7263,-9"
+       fill="none"
+       style="stroke:#ff69b4;stroke-width:0.45"
+       id="path783" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="113.4527"
+       x="2452.5"
+       y="1473.2122"
+       id="text785">Факторы затопления</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="10.8px"
+       lengthAdjust="spacing"
+       textLength="100.2797"
+       x="2452.5"
+       y="1487.577"
+       id="text787">потенциальные&lt;/b&gt;</text>
+  </g>
+  <g
+     class="link"
+     data-entity-1="chirps"
+     data-entity-2="selectMax"
+     data-source-line="139"
+     data-uid="lnk16"
+     id="link_chirps_selectMax"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="139"
+       d="m 260.352,326.2078 c -60.552,0 -140.652,0 -140.652,0 0,0 0,47.295 0,82.494"
+       fill="none"
+       id="chirps-to-selectMax"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="116.1,406.0018 119.7,414.1018 123.3,406.0018 119.7,409.6018 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon791" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="chirps"
+     data-entity-2="selectMax5"
+     data-source-line="140"
+     data-uid="lnk17"
+     id="link_chirps_selectMax5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="140"
+       d="m 326.7,360.5698 c 0,16.911 0,31.662 0,48.042"
+       fill="none"
+       id="chirps-to-selectMax5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="323.1,405.9118 326.7,414.0118 330.3,405.9118 326.7,409.5118 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon795" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="selectMax"
+     data-entity-2="chirps_max1"
+     data-source-line="141"
+     data-uid="lnk18"
+     id="link_selectMax_chirps_max1"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="141"
+       d="m 141.3,475.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="selectMax-to-chirps_max1"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="137.7,528.4288 141.3,536.5288 144.9,528.4288 141.3,532.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon799" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="selectMax5"
+     data-entity-2="chirps_max5"
+     data-source-line="142"
+     data-uid="lnk19"
+     id="link_selectMax5_chirps_max5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="142"
+       d="m 326.7,475.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="selectMax5-to-chirps_max5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="323.1,528.4288 326.7,536.5288 330.3,528.4288 326.7,532.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon803" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="chirps_max1"
+     data-entity-2="calc_stat"
+     data-source-line="143"
+     data-uid="lnk20"
+     id="link_chirps_max1_calc_stat"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="143"
+       d="m 207.693,567.4078 c 23.85,0 44.982,0 44.982,0 0,0 0,55.161 0,93.483"
+       fill="none"
+       id="chirps_max1-to-calc_stat"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="249.075,658.1908 252.675,666.2908 256.275,658.1908 252.675,661.7908 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon807" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="chirps_max5"
+     data-entity-2="calc_stat"
+     data-source-line="144"
+     data-uid="lnk21"
+     id="link_chirps_max5_calc_stat"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="144"
+       d="m 326.7,598.1248 c 0,20.502 0,41.985 0,62.541"
+       fill="none"
+       id="chirps_max5-to-calc_stat"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="323.1,657.9658 326.7,666.0658 330.3,657.9658 326.7,661.5658 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon811" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="calc_stat"
+     data-entity-2="chirps_stat"
+     data-source-line="145"
+     data-uid="lnk22"
+     id="link_calc_stat_chirps_stat"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="145"
+       d="m 327.6,727.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="calc_stat-to-chirps_stat"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="324,780.4288 327.6,788.5288 331.2,780.4288 327.6,784.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon815" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="chirps_stat"
+     data-entity-2="approx"
+     data-source-line="146"
+     data-uid="lnk23"
+     id="link_chirps_stat_approx"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="146"
+       d="m 327.6,850.2958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="chirps_stat-to-approx"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="324,902.8288 327.6,910.9288 331.2,902.8288 327.6,906.4288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon819" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="ari"
+     data-entity-2="approx"
+     data-source-line="147"
+     data-uid="lnk24"
+     id="link_ari_approx"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="147"
+       d="m 219.33,941.8078 c 10.458,0 15.597,0 25.776,0"
+       fill="none"
+       id="ari-to-approx"
+       style="stroke:#708090;stroke-width:1.8;stroke-dasharray:6.3, 6.3" />
+    <polygon
+       fill="#708090"
+       points="242.406,945.4078 250.506,941.8078 242.406,938.2078 246.006,941.8078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon823" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="approx"
+     data-entity-2="rx1"
+     data-source-line="148"
+     data-uid="lnk25"
+     id="link_approx_rx1"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="148"
+       d="m 261.9,972.5068 c 0,40.338 0,106.101 0,106.101 0,0 -3.303,0 -15.066,0"
+       fill="none"
+       id="approx-to-rx1"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="249.534,1075.0078 241.434,1078.6078 249.534,1082.2078 245.934,1078.6078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon827" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="approx"
+     data-entity-2="rx5"
+     data-source-line="149"
+     data-uid="lnk26"
+     id="link_approx_rx5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="149"
+       d="m 336.6,972.5068 c 0,22.455 0,47.385 0,69.867"
+       fill="none"
+       id="approx-to-rx5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="333,1039.6738 336.6,1047.7738 340.2,1039.6738 336.6,1043.2738 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon831" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="dem"
+     data-entity-2="fill_p"
+     data-source-line="171"
+     data-uid="lnk43"
+     id="link_dem_fill_p"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="171"
+       d="m 809.397,353.4148 c 0,18.162 0,36.549 0,55.332"
+       fill="none"
+       id="dem-to-fill_p"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="805.797,406.0468 809.397,414.1468 812.997,406.0468 809.397,409.6468 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon835" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill_p"
+     data-entity-2="fill"
+     data-source-line="172"
+     data-uid="lnk44"
+     id="link_fill_p_fill"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="172"
+       d="m 797.4,475.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="fill_p-to-fill"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="793.8,528.4288 797.4,536.5288 801,528.4288 797.4,532.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon839" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill"
+     data-entity-2="slope_p"
+     data-source-line="173"
+     data-uid="lnk45"
+     id="link_fill_slope_p"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="173"
+       d="m 735.975,598.1248 c 0,20.502 0,41.985 0,62.541"
+       fill="none"
+       id="fill-to-slope_p"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="732.375,657.9658 735.975,666.0658 739.575,657.9658 735.975,661.5658 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon843" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill"
+     data-entity-2="fdir_p"
+     data-source-line="174"
+     data-uid="lnk46"
+     id="link_fill_fdir_p"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="174"
+       d="m 723.987,567.4078 c -76.086,0 -183.987,0 -183.987,0 0,0 0,63.387 0,100.728"
+       fill="none"
+       id="fill-to-fdir_p"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="536.4,665.4358 540,673.5358 543.6,665.4358 540,669.0358 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon847" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="slope_p"
+     data-entity-2="slope"
+     data-source-line="175"
+     data-uid="lnk47"
+     id="link_slope_p_slope"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="175"
+       d="m 722.475,727.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="slope_p-to-slope"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="718.875,780.4288 722.475,788.5288 726.075,780.4288 722.475,784.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon851" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fdir_p"
+     data-entity-2="fdir"
+     data-source-line="176"
+     data-uid="lnk48"
+     id="link_fdir_p_fdir"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="176"
+       d="m 550.8,720.6058 c 0,19.386 0,41.58 0,62.685"
+       fill="none"
+       id="fdir_p-to-fdir"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="547.2,780.5908 550.8,788.6908 554.4,780.5908 550.8,784.1908 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon855" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fdir"
+     data-entity-2="basin_calc"
+     data-source-line="177"
+     data-uid="lnk49"
+     id="link_fdir_basin_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="177"
+       d="m 550.8,850.2958 c 0,21.105 0,43.245 0,62.577"
+       fill="none"
+       id="fdir-to-basin_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="547.2,910.1728 550.8,918.2728 554.4,910.1728 550.8,913.7728 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon859" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="basin_calc"
+     data-entity-2="basin_raw"
+     data-source-line="178"
+     data-uid="lnk50"
+     id="link_basin_calc_basin_raw"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="178"
+       d="m 567,965.3248 c 0,22.842 0,52.236 0,77.238"
+       fill="none"
+       id="basin_calc-to-basin_raw"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="563.4,1039.8628 567,1047.9628 570.6,1039.8628 567,1043.4628 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon863" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="basin_raw"
+     data-entity-2="basin_gen_calc"
+     data-source-line="179"
+     data-uid="lnk51"
+     id="link_basin_raw_basin_gen_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="179"
+       d="m 567,1109.4958 c 0,24.3 0,52.587 0,76.869"
+       fill="none"
+       id="basin_raw-to-basin_gen_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="563.4,1183.6648 567,1191.7648 570.6,1183.6648 567,1187.2648 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon867" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="basin_gen_calc"
+     data-entity-2="basin"
+     data-source-line="180"
+     data-uid="lnk52"
+     id="link_basin_gen_calc_basin"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="180"
+       d="m 577.8,1253.3248 c 0,20.502 0,41.985 0,62.541"
+       fill="none"
+       id="basin_gen_calc-to-basin"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="574.2,1313.1658 577.8,1321.2658 581.4,1313.1658 577.8,1316.7658 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon871" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="watercourse_synonym"
+     data-entity-2="hand_calc"
+     data-source-line="183"
+     data-uid="lnk54"
+     id="link_watercourse_synonym_hand_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="183"
+       d="m 1134.9,590.8798 c 0,21.15 0,46.989 0,70.101"
+       fill="none"
+       id="watercourse_synonym-to-hand_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1131.3,658.2808 1134.9,666.3808 1138.5,658.2808 1134.9,661.8808 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon875" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill"
+     data-entity-2="hand_calc"
+     data-source-line="184"
+     data-uid="lnk55"
+     id="link_fill_hand_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="184"
+       d="m 871.047,596.2078 c 76.698,0 185.778,0 185.778,0 0,0 0,34.965 0,64.611"
+       fill="none"
+       id="fill-to-hand_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1053.225,658.1188 1056.825,666.2188 1060.425,658.1188 1056.825,661.7188 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon879" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="hand_calc"
+     data-entity-2="hand"
+     data-source-line="185"
+     data-uid="lnk56"
+     id="link_hand_calc_hand"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="185"
+       d="m 1144.8,727.8958 c 0,21.105 0,43.245 0,62.577"
+       fill="none"
+       id="hand_calc-to-hand"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1141.2,787.7728 1144.8,795.8728 1148.4,787.7728 1144.8,791.3728 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon883" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill"
+     data-entity-2="twi_calc"
+     data-source-line="187"
+     data-uid="lnk57"
+     id="link_fill_twi_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="187"
+       d="m 825.3,598.1248 c 0,20.502 0,41.985 0,62.541"
+       fill="none"
+       id="fill-to-twi_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="821.7,657.9658 825.3,666.0658 828.9,657.9658 825.3,661.5658 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon887" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="twi_calc"
+     data-entity-2="twi"
+     data-source-line="188"
+     data-uid="lnk58"
+     id="link_twi_calc_twi"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="188"
+       d="m 915.3,727.8958 c 0,21.105 0,43.245 0,62.577"
+       fill="none"
+       id="twi_calc-to-twi"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="911.7,787.7728 915.3,795.8728 918.9,787.7728 915.3,791.3728 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon891" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="hand"
+     data-entity-2="factors"
+     data-source-line="190"
+     data-uid="lnk59"
+     id="link_hand_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="190"
+       d="m 1216.674,819.4078 c 29.781,0 57.501,0 57.501,0 0,0 0,922.194 0,1072.566"
+       fill="none"
+       id="hand-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1270.575,1889.2738 1274.175,1897.3738 1277.775,1889.2738 1274.175,1892.8738 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon895" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="slope"
+     data-entity-2="factors"
+     data-source-line="191"
+     data-uid="lnk60"
+     id="link_slope_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="191"
+       d="m 759.294,846.4078 c 115.587,0 512.748,0 512.748,0 0,0 0,897.471 0,1045.602"
+       fill="none"
+       id="slope-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1268.442,1889.3098 1272.042,1897.4098 1275.642,1889.3098 1272.042,1892.9098 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon899" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="twi"
+     data-entity-2="factors"
+     data-source-line="192"
+     data-uid="lnk61"
+     id="link_twi_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="192"
+       d="m 915.3,842.8708 c 0,159.255 0,1075.437 0,1075.437 0,0 230.715,0 348.993,0"
+       fill="none"
+       id="twi-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1261.593,1921.9078 1269.693,1918.3078 1261.593,1914.7078 1265.193,1918.3078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon903" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="landuse"
+     data-entity-2="scs_calc"
+     data-source-line="237"
+     data-uid="lnk99"
+     id="link_landuse_scs_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="237"
+       d="m 1837.278,326.2078 c 48.879,0 125.172,0 125.172,0 0,0 0,47.295 0,82.494"
+       fill="none"
+       id="landuse-to-scs_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1958.85,406.0018 1962.45,414.1018 1966.05,406.0018 1962.45,409.6018 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon907" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="soil"
+     data-entity-2="scs_calc"
+     data-source-line="238"
+     data-uid="lnk100"
+     id="link_soil_scs_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="238"
+       d="m 2023.2,353.4148 c 0,18.162 0,36.549 0,55.332"
+       fill="none"
+       id="soil-to-scs_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2019.6,406.0468 2023.2,414.1468 2026.8,406.0468 2023.2,409.6468 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon911" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cn_ref"
+     data-entity-2="scs_calc"
+     data-source-line="239"
+     data-uid="lnk101"
+     id="link_cn_ref_scs_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="239"
+       d="m 1914.57,445.0078 c 10.359,0 15.498,0 25.74,0"
+       fill="none"
+       id="cn_ref-to-scs_calc"
+       style="stroke:#708090;stroke-width:1.8;stroke-dasharray:6.3, 6.3" />
+    <polygon
+       fill="#708090"
+       points="1937.61,448.6078 1945.71,445.0078 1937.61,441.4078 1941.21,445.0078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon915" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="scs_calc"
+     data-entity-2="cn"
+     data-source-line="240"
+     data-uid="lnk102"
+     id="link_scs_calc_cn"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="240"
+       d="m 2060.325,475.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="scs_calc-to-cn"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2056.725,528.4288 2060.325,536.5288 2063.925,528.4288 2060.325,532.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon919" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rx5_synonym"
+     data-entity-2="runoff_calc_5"
+     data-source-line="244"
+     data-uid="lnk104"
+     id="link_rx5_synonym_runoff_calc_5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="244"
+       d="m 1983.6,590.9878 c 0,28.251 0,71.82 0,71.82 0,0 6.264,0 21.429,0"
+       fill="none"
+       id="rx5_synonym-to-runoff_calc_5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2002.329,666.4078 2010.429,662.8078 2002.329,659.2078 2005.929,662.8078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon923" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cn"
+     data-entity-2="runoff_calc_5"
+     data-source-line="245"
+     data-uid="lnk105"
+     id="link_cn_runoff_calc_5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="245"
+       d="m 2050.947,598.1248 c 0,18.261 0,36.171 0,55.575"
+       fill="none"
+       id="cn-to-runoff_calc_5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2047.347,650.9998 2050.947,659.0998 2054.547,650.9998 2050.947,654.5998 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon927" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="runoff_calc_5"
+     data-entity-2="run_rx5"
+     data-source-line="246"
+     data-uid="lnk106"
+     id="link_runoff_calc_5_run_rx5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="246"
+       d="m 2126.7,735.0688 c 0,17.262 0,32.004 0,48.276"
+       fill="none"
+       id="runoff_calc_5-to-run_rx5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2123.1,780.6448 2126.7,788.7448 2130.3,780.6448 2126.7,784.2448 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon931" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="run_rx5"
+     data-entity-2="flow_acc_5_calc"
+     data-source-line="247"
+     data-uid="lnk107"
+     id="link_run_rx5_flow_acc_5_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="247"
+       d="m 2155.5,850.2958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="run_rx5-to-flow_acc_5_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2151.9,902.8288 2155.5,910.9288 2159.1,902.8288 2155.5,906.4288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon935" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fdir_synonym"
+     data-entity-2="flow_acc_5_calc"
+     data-source-line="251"
+     data-uid="lnk109"
+     id="link_fdir_synonym_flow_acc_5_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="251"
+       d="m 2074.248,819.4078 c 14.634,0 26.127,0 26.127,0 0,0 0,49.851 0,86.112"
+       fill="none"
+       id="fdir_synonym-to-flow_acc_5_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2096.775,902.8198 2100.375,910.9198 2103.975,902.8198 2100.375,906.4198 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon939" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="flow_acc_5_calc"
+     data-entity-2="flow_acc_5"
+     data-source-line="252"
+     data-uid="lnk110"
+     id="link_flow_acc_5_calc_flow_acc_5"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="252"
+       d="m 2094.588,941.8078 c -6.147,0 -10.188,0 -10.188,0 0,0 0,60.363 0,100.701"
+       fill="none"
+       id="flow_acc_5_calc-to-flow_acc_5"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2080.8,1039.8088 2084.4,1047.9088 2088,1039.8088 2084.4,1043.4088 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon943" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="flow_acc_5"
+     data-entity-2="watercourse_sel"
+     data-source-line="253"
+     data-uid="lnk111"
+     id="link_flow_acc_5_watercourse_sel"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="253"
+       d="m 1980.9,1109.4958 c 0,21.987 0,46.26 0,69.696"
+       fill="none"
+       id="flow_acc_5-to-watercourse_sel"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1977.3,1176.4918 1980.9,1184.5918 1984.5,1176.4918 1980.9,1180.0918 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon947" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="watercourse_sel"
+     data-entity-2="watercourse_val"
+     data-source-line="254"
+     data-uid="lnk112"
+     id="link_watercourse_sel_watercourse_val"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="254"
+       d="m 2033.586,1222.6078 c 10.431,0 15.669,0 26.019,0"
+       fill="none"
+       id="watercourse_sel-backto-watercourse_val"
+       style="stroke:#708090;stroke-width:1.8;stroke-dasharray:6.3, 6.3" />
+    <polygon
+       fill="#708090"
+       points="2036.286,1219.0078 2028.186,1222.6078 2036.286,1226.2078 2032.686,1222.6078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon951" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="watercourse_sel"
+     data-entity-2="watercourse"
+     data-source-line="255"
+     data-uid="lnk113"
+     id="link_watercourse_sel_watercourse"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="255"
+       d="m 1942.2,1260.4438 c 0,22.113 0,43.929 0,62.955"
+       fill="none"
+       id="watercourse_sel-to-watercourse"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1938.6,1320.6988 1942.2,1328.7988 1945.8,1320.6988 1942.2,1324.2988 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon955" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="xrain"
+     data-entity-2="idf_analyze"
+     data-source-line="257"
+     data-uid="lnk114"
+     id="link_xrain_idf_analyze"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="257"
+       d="m 2181.15,353.4148 c 0,18.162 0,36.549 0,55.332"
+       fill="none"
+       id="xrain-to-idf_analyze"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2177.55,406.0468 2181.15,414.1468 2184.75,406.0468 2181.15,409.6468 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon959" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="idf_analyze"
+     data-entity-2="rain"
+     data-source-line="258"
+     data-uid="lnk115"
+     id="link_idf_analyze_rain"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="258"
+       d="m 2234.7,475.8958 c 0,16.29 0,31.005 0,48.231"
+       fill="none"
+       id="idf_analyze-to-rain"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2231.1,521.4268 2234.7,529.5268 2238.3,521.4268 2234.7,525.0268 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon963" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rain"
+     data-entity-2="rain_intens_calc"
+     data-source-line="259"
+     data-uid="lnk116"
+     id="link_rain_rain_intens_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="259"
+       d="m 2281.203,605.2438 c 0,22.113 0,43.929 0,62.955"
+       fill="none"
+       id="rain-to-rain_intens_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2277.603,665.4988 2281.203,673.5988 2284.803,665.4988 2281.203,669.0988 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon967" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cn"
+     data-entity-2="rain_intens_calc"
+     data-source-line="260"
+     data-uid="lnk117"
+     id="link_cn_rain_intens_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="260"
+       d="m 2081.853,598.2868 c 0,16.695 0,33.921 0,33.921 0,0 155.394,0 155.394,0 0,0 0,17.145 0,35.64"
+       fill="none"
+       id="cn-to-rain_intens_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2233.647,665.1478 2237.247,673.2478 2240.847,665.1478 2237.247,668.7478 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon971" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rx1_synonym"
+     data-entity-2="rain_intens_calc"
+     data-source-line="264"
+     data-uid="lnk119"
+     id="link_rx1_synonym_rain_intens_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="264"
+       d="m 2378.7,590.8798 c 0,23.337 0,53.559 0,76.995"
+       fill="none"
+       id="rx1_synonym-to-rain_intens_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2375.1,665.1748 2378.7,673.2748 2382.3,665.1748 2378.7,668.7748 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon975" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rain_intens_calc"
+     data-entity-2="rx"
+     data-source-line="265"
+     data-uid="lnk120"
+     id="link_rain_intens_calc_rx"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="265"
+       d="m 2320.425,720.6058 c 0,19.386 0,41.58 0,62.685"
+       fill="none"
+       id="rain_intens_calc-to-rx"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2316.825,780.5908 2320.425,788.6908 2324.025,780.5908 2320.425,784.1908 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon979" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rx"
+     data-entity-2="rainfall_acc_calc"
+     data-source-line="266"
+     data-uid="lnk121"
+     id="link_rx_rainfall_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="266"
+       d="m 2328.3,850.2958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="rx-to-rainfall_acc_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2324.7,902.8288 2328.3,910.9288 2331.9,902.8288 2328.3,906.4288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon983" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rainfall_acc_calc"
+     data-entity-2="rainfall_acc"
+     data-source-line="267"
+     data-uid="lnk122"
+     id="link_rainfall_acc_calc_rainfall_acc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="267"
+       d="m 2328.3,972.5068 c 0,22.455 0,47.385 0,69.867"
+       fill="none"
+       id="rainfall_acc_calc-to-rainfall_acc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2324.7,1039.6738 2328.3,1047.7738 2331.9,1039.6738 2328.3,1043.2738 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon987" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="landuse"
+     data-entity-2="manning_calc"
+     data-source-line="269"
+     data-uid="lnk123"
+     id="link_landuse_manning_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="269"
+       d="m 1757.493,326.2078 c -39.456,0 -94.068,0 -94.068,0 0,0 0,245.898 0,334.737"
+       fill="none"
+       id="landuse-to-manning_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1659.825,658.2448 1663.425,666.3448 1667.025,658.2448 1663.425,661.8448 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon991" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="manning_calc"
+     data-entity-2="manning_ref"
+     data-source-line="270"
+     data-uid="lnk124"
+     id="link_manning_calc_manning_ref"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="270"
+       d="m 1784.34,697.0078 c 10.431,0 15.57,0 25.812,0"
+       fill="none"
+       id="manning_calc-backto-manning_ref"
+       style="stroke:#708090;stroke-width:1.8;stroke-dasharray:6.3, 6.3" />
+    <polygon
+       fill="#708090"
+       points="1787.04,693.4078 1778.94,697.0078 1787.04,700.6078 1783.44,697.0078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon995" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="manning_calc"
+     data-entity-2="manning"
+     data-source-line="271"
+     data-uid="lnk125"
+     id="link_manning_calc_manning"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="271"
+       d="m 1680.3,727.8958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="manning_calc-to-manning"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1676.7,780.4288 1680.3,788.5288 1683.9,780.4288 1680.3,784.0288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon999" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rainfall_acc"
+     data-entity-2="flow_h_calc"
+     data-source-line="273"
+     data-uid="lnk126"
+     id="link_rainfall_acc_flow_h_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="273"
+       d="m 2328.3,1109.4958 c 0,19.836 0,40.527 0,62.658"
+       fill="none"
+       id="rainfall_acc-to-flow_h_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2324.7,1169.4538 2328.3,1177.5538 2331.9,1169.4538 2328.3,1173.0538 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1003" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="manning"
+     data-entity-2="flow_h_calc"
+     data-source-line="274"
+     data-uid="lnk127"
+     id="link_manning_flow_h_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="274"
+       d="m 1707.975,850.0978 c 0,87.66 0,332.91 0,332.91 0,0 373.212,0 538.857,0"
+       fill="none"
+       id="manning-to-flow_h_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2244.132,1186.6078 2252.232,1183.0078 2244.132,1179.4078 2247.732,1183.0078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1007" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="slope_synonym"
+     data-entity-2="flow_h_calc"
+     data-source-line="278"
+     data-uid="lnk129"
+     id="link_slope_synonym_flow_h_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="278"
+       d="m 2185.2,1109.3968 c 0,29.934 0,70.911 0,70.911 0,0 27.369,0 61.542,0"
+       fill="none"
+       id="slope_synonym-to-flow_h_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2244.042,1183.9078 2252.142,1180.3078 2244.042,1176.7078 2247.642,1180.3078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1011" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="flow_h_calc"
+     data-entity-2="flow_h"
+     data-source-line="279"
+     data-uid="lnk130"
+     id="link_flow_h_calc_flow_h"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="279"
+       d="m 2348.1,1267.9318 c 0,17.667 0,32.058 0,48.024"
+       fill="none"
+       id="flow_h_calc-to-flow_h"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="2344.5,1313.2558 2348.1,1321.3558 2351.7,1313.2558 2348.1,1316.8558 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1015" />
+  </g>
+  <path
+     codeLine="279"
+     d="m 2355.0775,1238.0299 c 0,178.8197 0,324.4808 0,486.0836"
+     fill="none"
+     id="flow_h_calc-to-flow_h-4"
+     style="stroke:#708090;stroke-width:1.80537;stroke-dasharray:none" />
+  <polygon
+     fill="#708090"
+     points="2344.5,1313.2558 2348.1,1321.3558 2351.7,1313.2558 2348.1,1316.8558 "
+     style="stroke:#708090;stroke-width:1.8"
+     id="polygon1015-9"
+     transform="translate(6.8525347,408.00351)" />
+  <g
+     class="link"
+     data-entity-1="cost_hor_calc_param"
+     data-entity-2="vf_calc"
+     data-source-line="281"
+     data-uid="lnk131"
+     id="link_cost_hor_calc_param_vf_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="281"
+       d="m 1817.1,979.9138 c 0,24.03 0,48.924 0,69.561"
+       fill="none"
+       id="cost_hor_calc_param-to-vf_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1813.5,1046.7748 1817.1,1054.8748 1820.7,1046.7748 1817.1,1050.3748 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1019" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="vf_calc"
+     data-entity-2="vf"
+     data-source-line="282"
+     data-uid="lnk132"
+     id="link_vf_calc_vf"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="282"
+       d="m 1781.325,1102.1698 c 0,51.327 0,167.436 0,219.852"
+       fill="none"
+       id="vf_calc-to-vf"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1777.725,1319.3218 1781.325,1327.4218 1784.925,1319.3218 1781.325,1322.9218 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1023" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_hor_calc_param"
+     data-entity-2="cost_hor_calc"
+     data-source-line="284"
+     data-uid="lnk133"
+     id="link_cost_hor_calc_param_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="284"
+       d="m 1731.744,941.8078 c -10.35,0 -15.57,0 -26.073,0"
+       fill="none"
+       id="cost_hor_calc_param-to-cost_hor_calc"
+       style="stroke:#708090;stroke-width:1.8;stroke-dasharray:6.3, 6.3" />
+    <polygon
+       fill="#708090"
+       points="1708.371,938.2078 1700.271,941.8078 1708.371,945.4078 1704.771,941.8078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1027" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="manning"
+     data-entity-2="cost_hor_calc"
+     data-source-line="285"
+     data-uid="lnk134"
+     id="link_manning_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="285"
+       d="m 1660.275,850.2958 c 0,18.558 0,36.684 0,55.233"
+       fill="none"
+       id="manning-to-cost_hor_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1656.675,902.8288 1660.275,910.9288 1663.875,902.8288 1660.275,906.4288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1031" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_hor_calc"
+     data-entity-2="cost_hor"
+     data-source-line="286"
+     data-uid="lnk135"
+     id="link_cost_hor_calc_cost_hor"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="286"
+       d="m 1597.5,972.5068 c 0,17.964 0,35.568 0,55.557"
+       fill="none"
+       id="cost_hor_calc-to-cost_hor"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1593.9,1025.3638 1597.5,1033.4638 1601.1,1025.3638 1597.5,1028.9638 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1035" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_hor"
+     data-entity-2="split_cost_hor_calc"
+     data-source-line="287"
+     data-uid="lnk136"
+     id="link_cost_hor_split_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="287"
+       d="m 1580.175,1123.7788 c 0,22.104 0,42.741 0,62.55"
+       fill="none"
+       id="cost_hor-to-split_cost_hor_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1576.575,1183.6288 1580.175,1191.7288 1583.775,1183.6288 1580.175,1187.2288 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1039" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="basin_synonym"
+     data-entity-2="split_bassin_stream"
+     data-source-line="291"
+     data-uid="lnk138"
+     id="link_basin_synonym_split_bassin_stream"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="291"
+       d="m 1378.8,972.5068 c 0,22.455 0,47.385 0,69.867"
+       fill="none"
+       id="basin_synonym-to-split_bassin_stream"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1375.2,1039.6738 1378.8,1047.7738 1382.4,1039.6738 1378.8,1043.2738 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1043" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="split_bassin_stream"
+     data-entity-2="split_cost_hor_calc"
+     data-source-line="292"
+     data-uid="lnk139"
+     id="link_split_bassin_stream_split_cost_hor_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="292"
+       d="m 1479.24,1078.6078 c 4.869,0 7.785,0 7.785,0 0,0 0,65.394 0,107.712"
+       fill="none"
+       id="split_bassin_stream-to-split_cost_hor_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1483.425,1183.6198 1487.025,1191.7198 1490.625,1183.6198 1487.025,1187.2198 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1047" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="split_cost_hor_calc"
+     data-entity-2="split_cost_hor"
+     data-source-line="293"
+     data-uid="lnk140"
+     id="link_split_cost_hor_calc_split_cost_hor"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="293"
+       d="m 1564.2,1253.3248 c 0,23.049 0,48.753 0,69.876"
+       fill="none"
+       id="split_cost_hor_calc-to-split_cost_hor"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1560.6,1320.5008 1564.2,1328.6008 1567.8,1320.5008 1564.2,1324.1008 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1051" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="split_cost_hor"
+     data-entity-2="cost_acc_calc"
+     data-source-line="295"
+     data-uid="lnk141"
+     id="link_split_cost_hor_cost_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="295"
+       d="m 1564.2,1375.7968 c 0,17.514 0,36.153 0,55.215"
+       fill="none"
+       id="split_cost_hor-to-cost_acc_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1560.6,1428.3118 1564.2,1436.4118 1567.8,1428.3118 1564.2,1431.9118 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1055" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="vf"
+     data-entity-2="cost_acc_calc"
+     data-source-line="296"
+     data-uid="lnk142"
+     id="link_vf_cost_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="296"
+       d="m 1772.1,1377.0838 c 0,30.114 0,76.824 0,76.824 0,0 -50.085,0 -103.725,0"
+       fill="none"
+       id="vf-to-cost_acc_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1671.075,1450.3078 1662.975,1453.9078 1671.075,1457.5078 1667.475,1453.9078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1059" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="watercourse"
+     data-entity-2="cost_acc_calc"
+     data-source-line="297"
+     data-uid="lnk143"
+     id="link_watercourse_cost_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="297"
+       d="m 1942.2,1375.7968 c 0,33.705 0,91.611 0,91.611 0,0 -162.027,0 -274.023,0"
+       fill="none"
+       id="watercourse-to-cost_acc_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1670.877,1463.8078 1662.777,1467.4078 1670.877,1471.0078 1667.277,1467.4078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1063" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="fill_synonym"
+     data-entity-2="cost_acc_calc"
+     data-source-line="301"
+     data-uid="lnk145"
+     id="link_fill_synonym_cost_acc_calc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="301"
+       d="m 1425.6,1383.0778 c 0,34.128 0,84.33 0,84.33 0,0 11.925,0 34.317,0"
+       fill="none"
+       id="fill_synonym-to-cost_acc_calc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1457.217,1471.0078 1465.317,1467.4078 1457.217,1463.8078 1460.817,1467.4078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1067" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_acc_calc"
+     data-entity-2="cost_acc_split"
+     data-source-line="302"
+     data-uid="lnk146"
+     id="link_cost_acc_calc_cost_acc_split"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="302"
+       d="m 1539,1498.2778 c 0,16.533 0,31.428 0,47.97"
+       fill="none"
+       id="cost_acc_calc-to-cost_acc_split"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1535.4,1543.5478 1539,1551.6478 1542.6,1543.5478 1539,1547.1478 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1071" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_acc_split"
+     data-entity-2="cost_acc_mosaic"
+     data-source-line="303"
+     data-uid="lnk147"
+     id="link_cost_acc_split_cost_acc_mosaic"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="303"
+       d="m 1448.1,1613.4778 c 0,16.533 0,31.428 0,47.97"
+       fill="none"
+       id="cost_acc_split-to-cost_acc_mosaic"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1444.5,1658.7478 1448.1,1666.8478 1451.7,1658.7478 1448.1,1662.3478 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1075" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_acc_mosaic"
+     data-entity-2="cost_acc"
+     data-source-line="304"
+     data-uid="lnk148"
+     id="link_cost_acc_mosaic_cost_acc"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="304"
+       d="m 1422,1728.6778 c 0,16.533 0,31.428 0,47.97"
+       fill="none"
+       id="cost_acc_mosaic-to-cost_acc"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1418.4,1773.9478 1422,1782.0478 1425.6,1773.9478 1422,1777.5478 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1079" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="rx"
+     data-entity-2="factors"
+     data-source-line="306"
+     data-uid="lnk149"
+     id="link_rx_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="306"
+       d="m 2240.28,819.4078 c -5.94,0 -9.63,0 -9.63,0 0,0 0,1098.9 0,1098.9 0,0 -617.13,0 -823.833,0"
+       fill="none"
+       id="rx-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1409.517,1914.7078 1401.417,1918.3078 1409.517,1921.9078 1405.917,1918.3078 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1083" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cn"
+     data-entity-2="factors"
+     data-source-line="307"
+     data-uid="lnk150"
+     id="link_cn_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="307"
+       d="m 2019.924,593.5078 c -169.362,0 -743.616,0 -743.616,0 0,0 0,1132.056 0,1298.682"
+       fill="none"
+       id="cn-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1272.708,1889.4898 1276.308,1897.5898 1279.908,1889.4898 1276.308,1893.0898 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1087" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cost_acc"
+     data-entity-2="factors"
+     data-source-line="308"
+     data-uid="lnk151"
+     id="link_cost_acc_factors"
+     transform="translate(6.2060887,-144.81992)">
+    <path
+       codeLine="308"
+       d="m 1352.025,1843.6168 c 0,17.289 0,33.03 0,48.321"
+       fill="none"
+       id="cost_acc-to-factors"
+       style="stroke:#708090;stroke-width:1.8" />
+    <polygon
+       fill="#708090"
+       points="1348.425,1889.2378 1352.025,1897.3378 1355.625,1889.2378 1352.025,1892.8378 "
+       style="stroke:#708090;stroke-width:1.8"
+       id="polygon1091" />
+  </g>
+  <g
+     class="legend"
+     data-source-line="100"
+     id="g130"
+     transform="translate(3.2679591,1014.4239)">
+    <rect
+       fill="none"
+       height="196.94881"
+       rx="4.5"
+       ry="4.5"
+       style="stroke:#696969;stroke-width:0.9"
+       width="287.07361"
+       x="10.8"
+       y="46.459"
+       id="rect10" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="148.2592"
+       x="15.3"
+       y="64.555702"
+       id="text12">Условные обозначения</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="3.5007"
+       x="15.3"
+       y="83.114601"
+       id="text14"> </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="30.128"
+       x="18.800699"
+       y="83.114601"
+       id="text16">Цвет</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="21.004101"
+       x="48.928699"
+       y="83.114601"
+       id="text18">      </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="3.5007"
+       x="69.9328"
+       y="83.114601"
+       id="text20"> </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="66.205399"
+       x="73.433502"
+       y="83.114601"
+       id="text22">Стереотип</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="3.5007"
+       x="139.6389"
+       y="83.114601"
+       id="text24"> </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="3.5007"
+       x="143.1396"
+       y="83.114601"
+       id="text26"> </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="61.535702"
+       x="146.6402"
+       y="83.114601"
+       id="text28">Описание</text>
+    <rect
+       fill="#ffb6c1"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="86.277"
+       id="rect30" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="10.5021"
+       x="15.3"
+       y="99.873596"
+       id="text32">   </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="28.005501"
+       x="69.9328"
+       y="99.873596"
+       id="text34">        </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="75.193901"
+       x="146.6402"
+       y="99.873596"
+       id="text36">База данных</text>
+    <rect
+       fill="#f0fff0"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="103.0359"
+       id="rect38" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="14.0027"
+       x="15.3"
+       y="116.6326"
+       id="text40">    </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="35.037601"
+       x="69.9328"
+       y="116.6326"
+       id="text42">«gee»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="116.9807"
+       x="146.6402"
+       y="116.6326"
+       id="text44">Google Earth Engine</text>
+    <rect
+       fill="#f5f5f5"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="119.7949"
+       id="rect46" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="7.0014"
+       x="15.3"
+       y="133.3916"
+       id="text48">  </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="34.317799"
+       x="69.9328"
+       y="133.3916"
+       id="text50">«File»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="30.9771"
+       x="146.6402"
+       y="133.3916"
+       id="text52">Файл</text>
+    <rect
+       fill="#f0f8ff"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="136.55389"
+       id="rect54" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="10.5021"
+       x="15.3"
+       y="150.1506"
+       id="text56">   </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="34.323898"
+       x="69.9328"
+       y="150.1506"
+       id="text58">«API»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="60.748199"
+       x="146.6402"
+       y="150.1506"
+       id="text60">Вызов API</text>
+    <rect
+       fill="#ffdab9"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="153.3129"
+       id="rect62" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="10.5021"
+       x="15.3"
+       y="166.90961"
+       id="text64">   </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="71.4226"
+       x="69.9328"
+       y="166.90961"
+       id="text66">«Transform»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="143.2327"
+       x="146.6402"
+       y="166.90961"
+       id="text68">Трансформация данных</text>
+    <rect
+       fill="#e6e6fa"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="170.0719"
+       id="rect70" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="14.0027"
+       x="15.3"
+       y="183.66859"
+       id="text72">    </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="47.619099"
+       x="69.9328"
+       y="183.66859"
+       id="text74">«ArcPy»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="143.0051"
+       x="146.6402"
+       y="183.66859"
+       id="text76">Трансформация с ArcPy</text>
+    <rect
+       fill="#fffacd"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="186.8309"
+       id="rect78" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="3.5007"
+       x="15.3"
+       y="200.42751"
+       id="text80"> </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="51.125999"
+       x="69.9328"
+       y="200.42751"
+       id="text82">«Param»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="67.583504"
+       x="146.6402"
+       y="200.42751"
+       id="text84">Параметры</text>
+    <rect
+       fill="#90ee90"
+       height="16.759001"
+       style="stroke:none;stroke-width:0.9"
+       width="54.632801"
+       x="15.3"
+       y="203.5898"
+       id="rect86" />
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="7.0014"
+       x="15.3"
+       y="217.18649"
+       id="text88">  </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="49.729401"
+       x="69.9328"
+       y="217.18649"
+       id="text90">«Result»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="108.9826"
+       x="146.6402"
+       y="217.18649"
+       id="text92">Выходные данные</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="52.5103"
+       x="15.3"
+       y="233.9455"
+       id="text94">               </text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="33.622601"
+       x="69.9328"
+       y="233.9455"
+       id="text96">«Ref»</text>
+    <text
+       fill="#000000"
+       font-family="PtSans"
+       font-size="12.6px"
+       lengthAdjust="spacing"
+       textLength="109.6348"
+       x="146.6402"
+       y="233.9455"
+       id="text98">Ссылка на данные</text>
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="69.517998"
+       y2="69.517998"
+       id="line100" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="86.277"
+       y2="86.277"
+       id="line102" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="103.0359"
+       y2="103.0359"
+       id="line104" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="119.7949"
+       y2="119.7949"
+       id="line106" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="136.55389"
+       y2="136.55389"
+       id="line108" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="153.3129"
+       y2="153.3129"
+       id="line110" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="170.0719"
+       y2="170.0719"
+       id="line112" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="186.8309"
+       y2="186.8309"
+       id="line114" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="203.5898"
+       y2="203.5898"
+       id="line116" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="220.3488"
+       y2="220.3488"
+       id="line118" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="293.3736"
+       y1="237.1078"
+       y2="237.1078"
+       id="line120" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="15.3"
+       x2="15.3"
+       y1="69.517998"
+       y2="237.1078"
+       id="line122" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="69.9328"
+       x2="69.9328"
+       y1="69.517998"
+       y2="237.1078"
+       id="line124" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="143.1396"
+       x2="143.1396"
+       y1="69.517998"
+       y2="237.1078"
+       id="line126" />
+    <line
+       style="stroke:#000000;stroke-width:0.9"
+       x1="293.3736"
+       x2="293.3736"
+       y1="69.517998"
+       y2="237.1078"
+       id="line128" />
+  </g>
+</svg>

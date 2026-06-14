@@ -1,0 +1,46 @@
+@startuml
+skinparam handwritten false
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+
+title Логика моделирования поверхностного стока (SCS-CN)
+
+start
+
+partition "Подготовка исходных данных" {
+  :Слой рельефа (DEM);
+  :Слой почв (Hydrologic Soil Groups - HSG);
+  :Слой землепользования (Land Use / Land Cover - LULC);
+  :Слой осадков (P, мм);
+}
+
+partition "Определение Curve Number (CN)" {
+  :Сопоставление HSG и LULC;
+  :Учет гидрологического состояния растительности;
+  :Выбор базового значения CN (для AMC II);
+  :Корректировка CN по влажности почвы (AMC I или AMC III);
+  note right: CN зависит от способности поверхности к инфильтрации
+}
+
+partition "Расчет гидрологических параметров" {
+  :Расчет макс. потенциального удержания (S);
+  note left: S = 25.4 * (1000/CN - 10)
+  :Выбор коэффициента начальных потерь (Ia);
+  note left: Ia = 0.2S (стандарт) или Ia = 0.05S (тропики)
+}
+
+partition "Генерация растра стока" {
+  if (P > Ia?) then (да)
+    :Расчет глубины стока (Q);
+    note right: Q = (P - Ia)^2 / (P - Ia + S)
+  else (нет)
+    :Q = 0;
+  endif
+}
+
+:Итоговый растр глубины поверхностного стока;
+
+stop
+@enduml

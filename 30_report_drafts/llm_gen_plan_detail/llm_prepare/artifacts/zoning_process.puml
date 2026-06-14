@@ -1,0 +1,16 @@
+@startuml
+skinparam monochrome true
+skinparam defaultFontName Arial
+top to bottom direction
+
+rectangle "Растровый слой" as R1
+rectangle "Классификация\n(пороговые значения)" as C
+rectangle "Дискретный растр" as R2
+rectangle "Поиск регионов\n(связность, площадь)" as S
+rectangle "Целевые зоны" as Z
+
+R1 -> C
+C -> R2
+R2 -> S
+S -> Z
+@enduml

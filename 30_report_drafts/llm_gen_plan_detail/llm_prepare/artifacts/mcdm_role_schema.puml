@@ -1,0 +1,56 @@
+@startuml
+!option handwritten false
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+title Роль MCDM в интеграции факторов затопления
+
+package "Входные факторы (Критерии)" {
+    [Физико-географические] as phys
+    [Почвенные] as soil
+    [Антропогенные] as anthro
+    
+    phys -[hidden]- soil
+    soil -[hidden]- anthro
+}
+
+note right of phys
+  Рельеф (уклон, TWI, HAND)
+  Гидрология (расстояние до воды)
+end note
+
+note right of soil
+  Водопроницаемость
+  Тип почвы (SCS-CN)
+end note
+
+note right of anthro
+  Использование земель
+  Плотность застройки
+end note
+
+rectangle "MCDM (Метод анализа иерархий)" as mcdm #LightBlue {
+    (Декомпозиция на иерархии) as decomp
+    (Попарное сравнение) as pairwise
+    (Расчет весов факторов) as weights
+    (Контроль согласованности) as cr
+    
+    decomp -> pairwise
+    pairwise -> weights
+    pairwise ..> cr : "CR < 0.1"
+}
+
+node "ГИС-интеграция (WLC)" as gis #LightGreen {
+    [Взвешенное наложение] as overlay
+}
+
+database "Карта рисков затопления" as result
+
+phys --> decomp
+soil --> decomp
+anthro --> decomp
+
+weights --> overlay
+overlay --> result
+
+@enduml

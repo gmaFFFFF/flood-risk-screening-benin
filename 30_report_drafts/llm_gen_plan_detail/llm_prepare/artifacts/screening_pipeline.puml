@@ -1,0 +1,27 @@
+@startuml
+skinparam roundCorner 15
+skinparam backgroundColor white
+skinparam arrowColor #666666
+skinparam defaultFontName Arial
+
+title Конвейер геоинформационного скрининга
+
+rectangle "1. Идентификация и\nподготовка факторов\n(Морфометрические, климатические,\nгидравлические свойства)" as Factors <<Input>>
+
+rectangle "2. Нормализация\n(Приведение к единой\nбезразмерной шкале 1–5)" as Normalization <<Process>>
+
+rectangle "3. Агрегация\n(Взвешенное наложение WLC)" as Aggregation <<Process>>
+
+rectangle "4. Расчет\nиндекса риска\n(Непрерывная поверхность)" as RiskIndex <<Output>>
+
+rectangle "5. Классификация и\nвыделение зон\n(Дискретные категории)" as Zoning <<Process>>
+
+rectangle "Зоны риска\n(Низкий, Средний,\nЭкстремальный)" as ResultZones <<Result>>
+
+Factors -> Normalization
+Normalization -> Aggregation
+Aggregation -> RiskIndex
+RiskIndex -> Zoning
+Zoning -> ResultZones
+
+@enduml

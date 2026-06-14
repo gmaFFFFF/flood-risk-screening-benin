@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 70 730 420" width="730px" height="420px" 
+style="background-color: white;"
+xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="groundHash-0" href="#groundHash"/>
+    <pattern id="groundHash" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#555" stroke-width="1.5" opacity="0.7"/>
+    </pattern>
+    <pattern id="groundHash-1" href="#groundHash"/>
+    <marker id="arrowStart" markerWidth="12" markerHeight="12" refX="2" refY="6" orient="auto">
+      <path d="M10,2 L2,6 L10,10 L8,6 Z" fill="#333"/>
+    </marker>
+    <marker id="arrowEnd" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 L4,6 Z" fill="#333"/>
+    </marker>
+    <style>
+      text { font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif; font-weight: bold; }
+      .label-blue { fill: #0056b3; }
+      .label-red { fill: #c82333; }
+      .label-dark { fill: #333; }
+      .sketchy-line { stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <style bx:fonts="PT Serif">@import url(https://fonts.googleapis.com/css2?family=PT+Serif%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&amp;display=swap);</style>
+  </defs>
+  <path d="M 51.216 100 L 180.426 155.35 L 250 376.748 L 224.773 376.748 C 213.873 365.653 216.654 346.985 210.334 334.346 C 202.549 318.776 205.922 297.557 198.176 282.067 C 190.448 266.611 186.321 248.933 181.155 233.435 C 175.326 215.946 172.95 189.971 159.271 176.292 C 152.809 169.831 142.457 156.943 134.954 153.191 C 108.466 139.947 77.266 139.662 51.216 124.103 L 51.216 100 Z" fill="url(#groundHash)" opacity="0.5" style="fill: url(&quot;#groundHash-0&quot;);"/>
+  <path d="M 550 376.748 L 620 155.35 L 750 100 L 750 122.82 C 731.905 123.462 718.673 136.712 702.736 144.681 C 686.37 152.863 652.171 163.136 643.161 181.155 C 629.825 207.827 626.945 239.12 613.982 265.046 C 604.239 284.532 610.916 312.514 601.824 330.699 C 596.405 341.537 592.341 352.096 587.234 362.31 C 585.15 366.478 579.453 371.725 577.213 376.748 L 550 376.748 Z" fill="url(#groundHash)" opacity="0.5" style="fill: url(&quot;#groundHash-1&quot;);"/>
+  <rect x="250" y="350" width="300" height="30" fill="url(#groundHash)" opacity="0.5"/>
+  <polygon points="199.292 205.379 602.822 202.813 576.228 276.648 553.577 347.943 250.369 348.421" opacity="0.8" stroke="none" style="fill: rgb(233, 244, 255); transform-origin: 396.348px 276.138px;"/>
+  <path d="M 203.101 205.535 C 215.145 201.391 227.189 201.391 239.233 205.535 C 251.276 209.678 263.321 209.678 275.364 205.535 C 293.43 201.391 311.496 201.391 329.561 205.535 C 347.627 209.678 365.693 209.678 383.759 205.535 C 407.847 203.663 431.934 210.347 456.022 205.535 C 480.11 200.723 504.197 209.678 528.285 205.535 C 552.373 201.391 576.46 201.391 600.548 205.535" fill="none" stroke="#0056b3" stroke-width="3" class="sketchy-line" style=""/>
+  <polyline points="50,100 180,150 250,350 550,350 620,150 750,100" fill="none" stroke="#333" stroke-width="4" class="sketchy-line"/>
+  <polyline points="203.616 205.927 252.218 345.924 547.783 345.924 596.384 205.927" fill="none" class="sketchy-line" style="stroke-width: 4px; stroke-dasharray: 10;" stroke="#d93025"/>
+  <line x1="400" y1="198.632" x2="400" y2="100" stroke-width="2" marker-start="url(#arrowStart)" style="stroke: rgb(0, 0, 0);"/>
+  <text x="400" y="90" text-anchor="middle" class="label-blue" font-size="18" style="white-space: pre;">УРОВЕНЬ ВОДЫ</text>
+  <line x1="400" y1="347.497" x2="400" y2="410" stroke-width="2" marker-start="url(#arrowStart)" style="stroke: rgb(0, 0, 0);"/>
+  <text class="label-red" style="font-size: 20px; text-anchor: middle; white-space: pre;"><tspan x="400" y="435">СМОЧЕННЫЙ ПЕРИМЕТР (</tspan><tspan style="font-family: &quot;PT Serif&quot;;">χ</tspan><tspan>)</tspan></text>
+  <line x1="680" y1="205.927" x2="680" y2="350" stroke="#333" stroke-width="2" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)" style=""/>
+  <line x1="604.195" y1="204.711" x2="684.195" y2="204.711" opacity="0.5" style="stroke: rgb(0, 0, 0); stroke-width: 3px;"/>
+  <line x1="550" y1="350" x2="700" y2="350" opacity="0.5" style="stroke: rgb(0, 0, 0); stroke-width: 3px;"/>
+  <text x="700" y="250" text-anchor="middle" transform="matrix(0, 1, -1, 0, 950, -425.68389892578125)" class="label-dark" font-size="18" style="white-space: pre; font-size: 18px;">ГЛУБИНА (h)</text>
+  <line x1="294.373" y1="350" x2="244.373" y2="390" stroke="#333" stroke-width="2" marker-start="url(#arrowStart)"/>
+  <text x="240" y="405" text-anchor="end" class="label-dark" style="white-space: pre;">ДНО</text>
+  <line x1="220.989" y1="271.33" x2="167.783" y2="271.33" stroke="#333" stroke-width="2" marker-start="url(#arrowStart)" style="transform-origin: 200.951px 269.454px;"/>
+  <text x="99.24" y="269.59" alignment-baseline="middle" class="label-dark" style="white-space: pre; font-size: 16px;">СТЕНКА</text>
+  <rect x="580" y="440" width="200" height="50" fill="none" stroke="#333" stroke-width="3" class="sketchy-line"/>
+  <text x="680" y="465" text-anchor="middle" class="label-dark" font-size="14" style="white-space: pre;">СХЕМА</text>
+  <text x="680" y="485" text-anchor="middle" class="label-dark" font-size="14" style="white-space: pre;">СЕЧЕНИЯ ПОТОКА</text>
+  <text class="label-blue" style="font-size: 18px; text-anchor: middle; white-space: pre;"><tspan x="393.266" y="279.636">Площадь живого</tspan><tspan x="393.266" dy="1em">​</tspan><tspan>сечения потока (</tspan><tspan style="font-family: &quot;PT Serif&quot;;">ω</tspan><tspan>)</tspan></text>
+</svg>

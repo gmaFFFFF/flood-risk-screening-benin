@@ -1,0 +1,24 @@
+@startuml
+skinparam BackgroundColor transparent
+
+card "Disaster Risk\n(Риск бедствий, R_c)" as Risk #lightgray
+
+card "Hazard\n(Опасность, H)" as Hazard #ffcccc
+card "Exposure\n(Досягаемость, E)" as Exposure #ccccff
+card "Vulnerability\n(Уязвимость, V)" as Vulnerability #ccffcc
+
+card "Sensitivity\n(Чувствительность, S)" as Sensitivity #white
+card "Adaptability\n(Адаптивность, A)" as Adaptability #white
+
+Hazard --> Risk
+Exposure --> Risk
+Vulnerability --> Risk
+
+Sensitivity --> Vulnerability
+Adaptability --> Vulnerability
+
+note bottom of Risk
+  Риск возникает только при
+  пересечении H, E и V
+end note
+@enduml

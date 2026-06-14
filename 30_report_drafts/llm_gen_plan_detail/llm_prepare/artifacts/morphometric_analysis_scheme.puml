@@ -1,0 +1,53 @@
+@startuml
+skinparam shadow false
+skinparam defaultFontName "PtSans"
+skinparam defaultFontSize 12
+skinparam roundCorner 10
+skinparam linetype ortho
+
+skinparam package {
+    BackgroundColor White
+    BorderColor LightGray
+    FontColor Gray
+    FontStyle Bold
+}
+
+skinparam database {
+    BackgroundColor LightPink
+    BorderColor HotPink
+}
+
+skinparam rectangle<<ArcPy>> {
+    BackgroundColor Lavender
+    BorderColor MediumPurple
+}
+
+skinparam rectangle<<Result>> {
+    BackgroundColor LightGreen
+    BorderColor MediumSeaGreen
+}
+
+title Схема морфометрического анализа рельефа
+
+package "Морфометрический анализ (на основе TanDEM-X)" {
+    database "<b>TanDEM-X</b>\n(Исходная ЦМР)" as dem
+    rectangle "<b>Гидрокоррекция</b>\n(Fill: заполнение локальных понижений)" as fill_p <<ArcPy>>
+    rectangle "<b>Расчет направления стока</b>\n(Flow Direction: D8)" as fdir_p <<ArcPy>>
+    rectangle "<b>Расчет водосборных бассейнов</b>\n(Basin)" as basin_calc <<ArcPy>>
+    rectangle "<b>Генерализация бассейнов</b>\n(Порог отсечения 100 км²)" as basin_gen_calc <<ArcPy>>
+    rectangle "<b>Откорректированная ЦМР</b>" as fill <<Result>>
+    rectangle "<b>Направление стока</b>" as fdir <<Result>>
+    rectangle "<b>Первичные водосборы</b>" as basin_raw <<Result>>
+    rectangle "<b>Бассейны</b>" as basin <<Result>>
+
+    dem --> fill_p
+    fill_p --> fill
+    fill --> fdir_p
+    fdir_p --> fdir
+    fdir --> basin_calc
+    basin_calc --> basin_raw
+    basin_raw --> basin_gen_calc
+    basin_gen_calc --> basin
+}
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam componentStyle rectangle
+
+component "Факторы затопления" {
+  [Уклон\n(градусы)] as slope
+  [Расстояние до реки\n(метры)] as dist
+  [Тип почвы\n(категории)] as soil
+}
+
+component "Нормализация" as norm
+
+component "Единая шкала" {
+  [Пригодность / Риск\n(0..1)] as scale
+}
+
+slope --> norm
+dist --> norm
+soil --> norm
+
+norm --> scale
+@enduml

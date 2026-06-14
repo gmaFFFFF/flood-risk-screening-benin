@@ -1,0 +1,31 @@
+@startuml
+!option handwritten false
+skinparam monochrome false
+
+
+node "ГИС (Подготовка данных)" as GIS_Data {
+  [ЦМР и морфометрия]
+  [Данные ДЗЗ]
+  [Гидрометеорология]
+}
+
+node "Гидрологическая модель" as Hydro_Model {
+  [Сток и расходы воды]
+}
+
+node "Гидродинамическая модель" as Hydrodyn_Model {
+  [Глубина и скорость затопления]
+}
+
+node "ГИС (Управление и анализ)" as GIS_Management {
+  [Оценка рисков]
+  [Карты зон затопления]
+  [Планирование мероприятий]
+}
+
+GIS_Data --> Hydro_Model : параметры\nводосбора
+Hydro_Model --> Hydrodyn_Model : гидрографы
+Hydrodyn_Model --> GIS_Management : результаты\nмоделирования
+GIS_Data --> Hydrodyn_Model : морфометрия русла\nи поймы
+
+@enduml

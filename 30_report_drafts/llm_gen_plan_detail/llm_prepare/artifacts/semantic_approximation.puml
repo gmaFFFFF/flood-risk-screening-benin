@@ -1,0 +1,41 @@
+@startuml
+!option handwritten true
+skinparam monochrome false
+skinparam defaultFontName Arial
+skinparam packageStyle rectangle
+
+title Метод последовательных приближений: Аппроксимация функцией
+
+node "1. Исходные данные" as Data {
+  [Непрерывный растр\n(например, Уклон, Расстояние)] as Raster
+}
+
+node "2. Черновая дискретная шкала" as Discrete {
+  [Экспертные пороги\n(0-5м: 10, 5-10м: 8...)] as Thresholds
+}
+
+node "3. Подбор функции (Аппроксимация)" as Approx {
+  [Выбор типа функции\n(Large, Small, LogisticDecay)] as FuncType
+  [Настройка параметров\n(Midpoint, Spread, Y-intercept)] as Params
+}
+
+node "4. Семантическое преобразование" as Output {
+  [Растр степени принадлежности\nμ ∈ (0, 1)] as FuzzyRaster
+}
+
+node "5. Гибридная нормализация" as Hybrid {
+    [Масштабирование μ\nв целевой диапазон (например, 1-10)] as Scaled
+}
+
+Raster --> Thresholds : Оценка
+Thresholds --> FuncType : Тренд
+FuncType --> Params : Уточнение порогов
+Params --> FuzzyRaster : Rescale by Function
+FuzzyRaster --> Scaled : Адаптация для агрегации
+
+note right of Approx
+  Плавная функция заменяет
+  ступенчатые переходы,
+  сохраняя экспертную логику
+end note
+@enduml

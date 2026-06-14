@@ -1,0 +1,13 @@
+{
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "useTab": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./_resources",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "promptDelete": false,
+  "trashOption": "local",
+  "useMarkdownLinks": true,
+  "focusNewTab": true
+}

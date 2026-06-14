@@ -1,0 +1,49 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white" />
+  
+  <!-- Slope -->
+  <line x1="50" y1="250" x2="350" y2="100" stroke="black" stroke-width="2" />
+  <line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-dasharray="5,5" />
+  <line x1="350" y1="100" x2="350" y2="250" stroke="black" stroke-dasharray="5,5" />
+  
+  <!-- Angle alpha -->
+  <path d="M 80 250 A 30 30 0 0 0 76 237" fill="none" stroke="blue" />
+  <text x="85" y="240" font-family="Arial" font-size="14" fill="blue">α</text>
+  
+  <!-- Object (simplified as a box) -->
+  <rect x="180" y="165" width="40" height="20" transform="rotate(-26.5 200 175)" fill="grey" stroke="black" />
+  
+  <!-- Forces -->
+  <!-- Gravity Fg -->
+  <line x1="200" y1="175" x2="200" y2="245" stroke="red" stroke-width="2" marker-end="url(#arrowred)" />
+  <text x="205" y="235" font-family="Arial" font-size="12" fill="red">Fg = mg</text>
+  
+  <!-- Component normal F_prizh -->
+  <line x1="200" y1="175" x2="231" y2="238" stroke="green" stroke-width="2" marker-end="url(#arrowgreen)" />
+  <text x="235" y="230" font-family="Arial" font-size="12" fill="green">Fprizh = mg·cos(α)</text>
+  
+  <!-- Component along slope F_scat -->
+  <line x1="200" y1="175" x2="137" y2="206" stroke="orange" stroke-width="2" marker-end="url(#arroworange)" />
+  <text x="110" y="225" font-family="Arial" font-size="12" fill="orange">Fscat = mg·sin(α)</text>
+  
+  <!-- Friction Ftr (opposite to motion) -->
+  <line x1="200" y1="175" x2="245" y2="153" stroke="purple" stroke-width="2" marker-end="url(#arrowpurple)" />
+  <text x="245" y="145" font-family="Arial" font-size="12" fill="purple">Ftr</text>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="red" />
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="green" />
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="orange" />
+    </marker>
+    <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="purple" />
+    </marker>
+  </defs>
+</svg>

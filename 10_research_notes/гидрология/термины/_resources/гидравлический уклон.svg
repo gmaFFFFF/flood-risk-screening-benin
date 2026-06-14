@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 214.914 803.5034 326.178" width="803.503px" height="326.178px"
+style="background-color: #ffffff;"
+xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="bedPattern-0" href="#bedPattern" patternTransform="matrix(0.999015, 0, 0, 0.961288, 0.591898, 137.141989)"/>
+    <pattern id="bedPattern" patternUnits="userSpaceOnUse" width="50" height="50">
+      <path d="M0,20 Q10,5 25,25 T50,20 L50,50 L0,50 Z" fill="#8c6b50" opacity="0.8"/>
+      <rect width="50" height="50" fill="#a68b70" opacity="0.3"/>
+    </pattern>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" style="stop-color:#4da6ff;stop-opacity:0.6"/>
+      <stop offset="1" style="stop-color:#0066cc;stop-opacity:0.8"/>
+    </linearGradient>
+    <marker id="arrow-start-blue" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 L6,4 Z" fill="#004080"/>
+    </marker>
+    <marker id="arrow-end-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#004080"/>
+    </marker>
+    <style bx:fonts="PT Serif">@import url(https://fonts.googleapis.com/css2?family=PT+Serif%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&amp;display=swap);</style>
+    <style>
+    text { font-family: 'Arial', sans-serif; }
+    .title { font-size: 24px; font-weight: bold; fill: #333; }
+    .formula { font-size: 20px; font-weight: bold; fill: #d60000; }
+    .label-env { font-size: 16px; fill: #555; font-style: italic;}
+    .label-head { font-size: 18px; font-weight: bold; fill: #004080; }
+    .label-h { font-size: 22px; font-weight: bold; fill: #d60000; }
+    .label-s { font-size: 18px; font-weight: bold; fill: #0066cc; }
+    .dim-line-blue { stroke: #004080; stroke-width: 1.5; }
+    .dim-line-red { stroke: #d60000; stroke-width: 3; }
+    .surface-line { stroke: #0066cc; stroke-width: 3; }
+    .construction-line { stroke: #888; stroke-width: 1; stroke-dasharray: 5,3; }
+  </style>
+  </defs>
+  <line x1="50" y1="520" x2="850" y2="520" stroke="#333" stroke-width="2"/>
+  <text style="font-family: &quot;PT Serif&quot;; white-space: pre;" x="343.465" y="536.092">Плоскость сравнения (Z=0)</text>
+  <g>
+    <path d="M 100.493 473.592 L 150.444 478.399 L 200.395 468.786 L 250.345 483.205 L 300.296 473.592 L 350.247 488.012 L 400.198 478.399 L 450.148 492.818 L 500.099 483.205 L 550.05 497.625 L 600.001 488.012 L 649.951 502.431 L 699.902 492.818 L 749.853 507.237 L 799.804 497.625 L 799.804 520.147 L 100.493 519.245 L 100.493 473.592 Z" stroke="#5a4d3e" stroke-width="2" style="fill: url(&quot;#bedPattern-0&quot;);" fill="url(#bedPattern)"/>
+    <path d="M 100.493 273.786 L 800.493 343.786 L 800.493 498.786 L 750.493 508.786 L 700.493 493.786 L 650.493 503.786 L 600.493 488.786 L 550.493 498.786 L 500.493 483.786 L 450.493 493.786 L 400.493 478.786 L 350.493 488.786 L 300.493 473.786 L 250.493 483.786 L 200.493 468.786 L 150.493 478.786 L 100.493 473.786 L 100.493 273.786 Z" fill="url(#waterGrad)"/>
+  </g>
+  <text class="label-env" style="fill: rgb(4, 4, 4); font-family: &quot;PT Serif&quot;; text-anchor: middle; white-space: pre;" x="436.937" y="474.324">Шероховатое русло</text>
+  <line x1="100" y1="274.092" x2="800" y2="344.092" class="surface-line" style=""/>
+  <g transform="matrix(1, 0, 0, 1, -509.6480712890625, 93.2810516357422)">
+    <rect x="617.857" y="286.68" width="161.101" height="34.623" style="stroke: rgb(0, 0, 0); stroke-width: 2px; fill: rgb(255, 255, 255);"/>
+    <text class="formula" style="fill: rgb(0, 0, 0); font-family: &quot;PT Serif&quot;; white-space: pre; font-size: 20px;" x="623.309" y="310.61">i = h / S = sin(α)</text>
+  </g>
+  <line x1="100" y1="520" x2="100" y2="274.092" class="construction-line" opacity="0.5" style=""/>
+  <line x1="800" y1="520" x2="799.144" y2="345.968" class="construction-line" opacity="0.5" style="stroke: rgb(35, 35, 35);"/>
+  <line x1="80" y1="520" x2="81.557" y2="275.016" class="dim-line-blue" marker-start="url(#arrow-start-blue)" marker-end="url(#arrow-end-blue)" style=""/>
+  <text class="label-head" style="font-family: &quot;PT Serif&quot;; font-size: 16px; white-space: pre;" x="57.837" y="395.759">H₁</text>
+  <line x1="820" y1="520" x2="820" y2="344.94" class="dim-line-blue" marker-start="url(#arrow-start-blue)" marker-end="url(#arrow-end-blue)" style=""/>
+  <text class="label-head" style="font-family: &quot;PT Serif&quot;; font-size: 16px; white-space: pre;" x="834.144" y="433.326">H₂</text>
+  <line x1="100.493" y1="273.786" x2="819.165" y2="273.786" class="construction-line" stroke="#333" style="stroke-width: 1;"/>
+  <text class="label-h" style="fill: rgb(0, 64, 128); font-family: &quot;PT Serif&quot;; font-size: 16px; text-anchor: middle; white-space: pre;" x="845.493" y="318.786">h</text>
+  <text class="label-s" transform="matrix(0.9950560331344604, 0.09932000190019608, -0.09932000190019608, 0.9950560331344604, 0.13300099968910217, 59.52228927612305)" style="fill: rgb(25, 25, 25); font-family: &quot;PT Serif&quot;; font-size: 16px; white-space: pre;" x="450" y="200">S</text>
+  <path d="M 298.305 292.085 C 291.469 292.026 292.88 272.851 298.316 274.182" stroke-width="3" style="stroke-width: 3; stroke: rgb(0, 64, 128); transform-origin: 296.005px 283.1px;" transform="matrix(-1, 0, 0, -1, 0, 0)" fill="none"/>
+  <polyline points="799.7310180664062 343.5790100097656 819.7310180664062 343.5790100097656" stroke="#333" stroke-width="1" style="stroke-width: 1;" fill="none"/>
+  <line x1="819.705" y1="342.142" x2="819.705" y2="274.095" class="dim-line-blue" marker-start="url(#arrow-start-blue)" marker-end="url(#arrow-end-blue)" style=""/>
+  <polyline points="80.255 273.682 100.255 273.682" stroke="#333" stroke-width="1" style="stroke-width: 1;" fill="none"/>
+  <text class="label-h" style="fill: rgb(0, 64, 128); font-family: &quot;PT Serif&quot;; font-size: 16px; text-anchor: middle; white-space: pre; stroke-width: 1;" x="318.351" y="287.614">α</text>
+  <text style="font-family: &quot;PT Serif&quot;; font-size: 26px; white-space: pre;" x="302.575" y="241.914">Гидравлический уклон</text>
+  <text class="label-s" transform="matrix(0.9950560331344604, 0.09932000190019608, -0.09932000190019608, 0.9950560331344604, -47.997901916503906, 76.45528411865236)" style="fill: rgb(25, 25, 25); font-family: &quot;PT Serif&quot;; font-size: 16px; white-space: pre; stroke-width: 1;" x="450" y="200">путь потока</text>
+</svg>

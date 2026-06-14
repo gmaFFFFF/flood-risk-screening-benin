@@ -1,0 +1,15 @@
+﻿# Obsidian
+.obsidian/workspace.json
+.obsidian/graph.json
+.obsidian/starred.json
+.obsidian/clippings/
+.trash/
+
+# OS assets
+.DS_Store
+Thumbs.db
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

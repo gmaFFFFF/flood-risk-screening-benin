@@ -1,0 +1,30 @@
+@startuml
+title Процесс гидродинамического моделирования затопления
+
+skinparam componentStyle uml2
+
+package "Входные данные" {
+    [ЦМР / Батиметрия] as DEM
+    [Граничные условия\n(Приток/Уровни)] as BC
+    [Шероховатость\n(Коэффициент Маннинга)] as N
+}
+
+package "Гидродинамическое ядро" {
+    component "Решение уравнений\n(SWE / Сен-Венан)" as Solver
+}
+
+package "Результаты" {
+    [Карта максимальных глубин] as Depth
+    [Поле скоростей] as Velocity
+    [Продолжительность затопления] as Duration
+}
+
+DEM --> Solver
+BC --> Solver
+N --> Solver
+
+Solver --> Depth
+Solver --> Velocity
+Solver --> Duration
+
+@enduml
